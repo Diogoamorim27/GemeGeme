@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 88 )
+extents = Vector2( 8.61871, 40.8821 )
 
 [node name="Rope" type="Area2D"]
 

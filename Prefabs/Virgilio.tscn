@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/CharacterArt/Personagem corda.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 30.7814
+
+[node name="Virgilio" type="Area2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 24, 24 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -8, 56 )
+shape = SubResource( 1 )
