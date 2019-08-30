@@ -5,10 +5,11 @@ enum states {RUN, JUMP, DEATH, IDLE, SWIM}
 const RUNNING_SPEED = 200
 const AIR_SPEED = 120
 const GRAVITY = WorldConstants.GRAVITY
-const JUMP = -55 * 5
+const JUMP = -55 * 3
+const BOOT_JUMP = -50
 const WATER_FALL_SPEED = 100
 const SWIM_SPEED = 100
-const SWIM_UP = -130
+const SWIM_UP = -100
 const WATER_GRAVITY = WorldConstants.GRAVITY * 0.6
 
 var balance = 0
@@ -19,6 +20,8 @@ onready var breath_timer = get_node("Timer_Breath")
 var breath
 var start_time
 var current_time
+export var has_boots = false
+var jump_speed
 #var punching = false
 
 func _ready():
@@ -29,22 +32,28 @@ func _process(delta):
 	#if Input.is_action_just_pressed("punch"):
 	#	punching = true
 	#	pass
+	if !has_boots:
+		jump_speed = JUMP
+	else:
+		jump_speed = JUMP + BOOT_JUMP
 	var input = _get_input_direction()
 	match state:
 		states.RUN:
 			_apply_movement(input, RUNNING_SPEED)
+			$AnimationPlayer.play("Run")
 			
 			if is_on_floor():
 				if input == 0:
 					state = states.IDLE
 				elif Input.is_action_pressed("ui_up"):
-					_jump(JUMP)
+					_jump(jump_speed)
 			else:
 				state = states.JUMP
 			
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 		
 		states.JUMP:
+			$AnimationPlayer.play("Jump")
 			_apply_gravity(delta)
 			_apply_movement(input, AIR_SPEED)
 			
@@ -62,12 +71,13 @@ func _process(delta):
 			
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 		
-		states.IDLE:		
+		states.IDLE:
+			$AnimationPlayer.play("Idle")
 			if is_on_floor():
 				if input != 0:
 					state = states.RUN
 				if Input.is_action_pressed("ui_up"):
-					_jump(JUMP)
+					_jump(jump_speed)
 			else:
 				state = states.JUMP
 				
@@ -92,16 +102,20 @@ func _get_input_direction() -> int:
 
 	if Input.is_action_pressed("ui_right") and !Input.is_action_pressed("ui_left"):
 		balance = 1
+		$Sprite.flip_h = false
 		return 1
 
 	if !Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_left"):
 		balance = -1
+		$Sprite.flip_h = true
 		return -1
 
 	if balance == 1 and Input.is_action_pressed("ui_left"):
+		$Sprite.flip_h = true
 		return -1
 
 	if balance == -1 and Input.is_action_pressed("ui_right"):
+		$Sprite.flip_h = false
 		return 1
 
 	return 0
