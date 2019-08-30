@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Arbusto.png-a8de0f6c53f27b13321e37ba12128907.stex"
+path="res://.import/Torre.png-4806431daf5eb2cb11ef0c549b9965a2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arbusto.png"
-dest_files=[ "res://.import/Arbusto.png-a8de0f6c53f27b13321e37ba12128907.stex" ]
+source_file="res://Sprites/Torre.png"
+dest_files=[ "res://.import/Torre.png-4806431daf5eb2cb11ef0c549b9965a2.stex" ]
 
 [params]
 

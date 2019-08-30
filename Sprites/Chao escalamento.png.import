@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chao escalamento.png-02f576aec41061661d1db8683bc6c6fc.stex"
+path="res://.import/Chao escalamento.png-c3865e7dd75e7e4a41a32abef3354de6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chao escalamento.png"
-dest_files=[ "res://.import/Chao escalamento.png-02f576aec41061661d1db8683bc6c6fc.stex" ]
+source_file="res://Sprites/Chao escalamento.png"
+dest_files=[ "res://.import/Chao escalamento.png-c3865e7dd75e7e4a41a32abef3354de6.stex" ]
 
 [params]
 
