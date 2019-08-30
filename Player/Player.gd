@@ -19,13 +19,16 @@ onready var breath_timer = get_node("Timer_Breath")
 var breath
 var start_time
 var current_time
+#var punching = false
 
 func _ready():
 	state = states.RUN
 	pass # Replace with function body.
 
 func _process(delta):
-	#print (enable_swim)
+	#if Input.is_action_just_pressed("punch"):
+	#	punching = true
+	#	pass
 	var input = _get_input_direction()
 	match state:
 		states.RUN:
@@ -59,7 +62,7 @@ func _process(delta):
 			
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 		
-		states.IDLE:
+		states.IDLE:		
 			if is_on_floor():
 				if input != 0:
 					state = states.RUN
@@ -75,7 +78,7 @@ func _process(delta):
 			print(breath)
 			_sink(delta)
 			_apply_movement(input, SWIM_SPEED)
-			if enable_swim == true and Input.is_action_pressed("ui_up"):
+			if enable_swim and Input.is_action_pressed("ui_up"):
 				_jump(SWIM_UP)
 				enable_swim = false
 			
