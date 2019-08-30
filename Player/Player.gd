@@ -41,7 +41,7 @@ func _process(delta):
 				else:
 					state = states.RUN
 			
-			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)	
+			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 		
 		states.DEATH:
 			_apply_movement(0, 0)
@@ -53,7 +53,7 @@ func _process(delta):
 			if is_on_floor():
 				if input != 0:
 					state = states.RUN
-				elif Input.is_action_pressed("ui_accept"):
+				if Input.is_action_pressed("ui_up"):
 					_jump()
 			else:
 				state = states.JUMP
