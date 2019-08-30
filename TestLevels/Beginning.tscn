@@ -12,7 +12,8 @@
 [ext_resource path="res://Sprites/Chao escalamento.png" type="Texture" id=10]
 [ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Sprites/Plataforma(1).png" type="Texture" id=12]
-[ext_resource path="res://Water.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=13]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )

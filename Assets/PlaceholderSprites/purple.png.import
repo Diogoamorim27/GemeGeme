@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue.webp-2f9df4b1c110b16bbc0ba895cde104cd.stex"
+path="res://.import/purple.png-0d4c41a6dc5e657408e896c7389f7148.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blue.webp"
-dest_files=[ "res://.import/blue.webp-2f9df4b1c110b16bbc0ba895cde104cd.stex" ]
+source_file="res://Assets/PlaceholderSprites/purple.png"
+dest_files=[ "res://.import/purple.png-0d4c41a6dc5e657408e896c7389f7148.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

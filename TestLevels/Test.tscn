@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/TileMapTest.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Water.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+
 
 [node name="Test" type="Node2D"]
 

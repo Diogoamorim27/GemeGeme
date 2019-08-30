@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-enum states {RUN, JUMP, DEATH, IDLE, SWIM}
+enum states {RUN, JUMP, DEATH, IDLE, SWIM, CLIMB}
 
-const RUNNING_SPEED = 100
+const RUNNING_SPEED = 200
 const AIR_SPEED = 120
 const GRAVITY = WorldConstants.GRAVITY
 const JUMP = -55 * 3
@@ -11,6 +11,7 @@ const WATER_FALL_SPEED = 100
 const SWIM_SPEED = 100
 const SWIM_UP = -100
 const WATER_GRAVITY = WorldConstants.GRAVITY * 0.6
+const CLIMB_SPEED = 100
 
 var balance = 0
 var movement : = Vector2()
@@ -70,6 +71,7 @@ func _process(delta):
 			_apply_gravity(delta)
 			
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
+			get_tree().reload_current_scene()
 		
 		states.IDLE:
 			$AnimationPlayer.play("Idle")
@@ -82,6 +84,7 @@ func _process(delta):
 				state = states.JUMP
 				
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)	
+
 		states.SWIM:
 			current_time = OS.get_unix_time()
 			breath = $Timer_Breath.wait_time - ((current_time - start_time) % 60)
@@ -93,6 +96,18 @@ func _process(delta):
 				enable_swim = false
 			
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
+			
+		states.CLIMB:
+			input = _get_vertical_input_direction()
+			_apply_vertical_movement(input, CLIMB_SPEED)
+#			_apply_movement(_get_input_direction(), AIR_SPEED)
+			
+#			if _get_input_direction():
+#				state = states.JUMP
+			
+			movement = move_and_slide(movement)
+			
+			pass
 			
 
 func _get_input_direction() -> int:
@@ -120,8 +135,16 @@ func _get_input_direction() -> int:
 
 	return 0
 	
+func _get_vertical_input_direction() -> int:
+	return int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	
+	
 func _apply_movement(input : int, speed : float) -> void:
 	movement.x = input * speed
+	
+func _apply_vertical_movement(input : int, speed : float) -> void:
+	movement.y = input * speed
+	pass
 	
 func _apply_gravity(delta) -> void:
 	movement.y += GRAVITY * delta
@@ -135,7 +158,6 @@ func _sink(delta) -> void:
 func _jump(jump_speed: float) -> void:
 	movement.y = jump_speed
 	pass
-
 
 
 func _on_Water_body_entered(body):
@@ -156,3 +178,20 @@ func _on_Timer_Swim_timeout():
 
 func _on_Timer_Breath_timeout():
 	state = states.DEATH
+
+func _on_Rope_body_entered(body):
+	if body.name == "Player":
+		state = states.CLIMB
+	pass # Replace with function body.
+
+
+func _on_Rope_body_exited(body):
+	if body.name == "Player":
+		state = states.JUMP
+	pass # Replace with function body.
+
+
+func _on_Spike_body_entered(body):
+	if body.name == "Player":
+		state = states.DEATH
+	
