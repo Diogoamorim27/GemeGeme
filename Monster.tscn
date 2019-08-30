@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Monster.gd" type="Script" id=1]
 [ext_resource path="res://Assets/PlaceholderSprites/red.png" type="Texture" id=2]
 [ext_resource path="res://TimerRight.gd" type="Script" id=3]
-[ext_resource path="res://TimerLeft.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -17,21 +16,16 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="RaycastWall" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 35, 0 )
+
+[node name="RayCastPatrol" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 50, 0 )
 
-[node name="TimerRight" type="Timer" parent="."]
+[node name="PatrolTimer" type="Timer" parent="."]
 wait_time = 2.0
-one_shot = true
 autostart = true
 script = ExtResource( 3 )
-
-[node name="TimerLeft" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-script = ExtResource( 4 )
-[connection signal="timeout" from="TimerRight" to="." method="_on_TimerRight_timeout"]
-[connection signal="timeout" from="TimerRight" to="TimerLeft" method="_on_TimerRight_timeout"]
-[connection signal="timeout" from="TimerLeft" to="." method="_on_TimerLeft_timeout"]
-[connection signal="timeout" from="TimerLeft" to="TimerRight" method="_on_TimerLeft_timeout"]
+[connection signal="timeout" from="PatrolTimer" to="." method="_on_PatrolTimer_timeout"]

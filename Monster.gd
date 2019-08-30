@@ -6,11 +6,12 @@ const RUNNING_SPEED = 300
 const AIR_SPEED = 120
 const GRAVITY = WorldConstants.GRAVITY
 const RAYCAST_CAST_TO = 10000
+const WALL_CAST_TO = 50
 
 onready var sprite : = $Sprite
-onready var timer_left : = $TimerLeft
-onready var timer_right : = $TimerRight
-onready var raycast : = $RayCast2D
+onready var timer : = $PatrolTimer
+onready var raycast : = $RayCastPatrol
+onready var raycast_wall : = $RaycastWall
 
 var state = states.SENTINEL
 var movement : = Vector2()
@@ -22,26 +23,40 @@ func _ready():
 
 
 func _process(delta):
+#	print(movement)
+#	print(state)
+
+	if movement.x > 0:
+		raycast_wall.cast_to.x = WALL_CAST_TO
+	if movement.x < 0:
+		raycast_wall.cast_to.x = -WALL_CAST_TO
+
 	match state:
 		states.SENTINEL:
 			_apply_movement(sentinel_direction, RUNNING_SPEED)
 			if raycast.get_collider():
 				if raycast.get_collider().name == "Player":
 					state = states.CHASE
-					timer_left.stop()
-					timer_right.stop()
+					timer.stop()
+					
+			if raycast_wall.is_colliding():
+				sentinel_direction *= -1
+				raycast_wall.cast_to.x *= -1
+				print (raycast_wall.cast_to.x)
+				timer.start()
 				
 						
 		states.CHASE:
 			if !raycast.get_collider():
 				state = states.SENTINEL
-				timer_right.start()
+				timer.start()
 			elif raycast.get_collider().name != "Player":
 				state = states.SENTINEL
-				timer_right.start()
+				timer.start()
 			pass
 		states.DEATH:
 			pass
+			
 			
 	_handle_animation()
 	if !is_on_floor():
@@ -59,16 +74,14 @@ func _apply_gravity(delta) -> void:
 func _handle_animation():
 	if movement.x > 0:
 		raycast.cast_to.x = RAYCAST_CAST_TO
+#		raycast_wall.cast_to.x = WALL_CAST_TO
 	if movement.x < 0:
 		raycast.cast_to.x = -RAYCAST_CAST_TO
+		raycast_wall.cast_to.x = -WALL_CAST_TO
 
 
 
-func _on_TimerLeft_timeout():
-	sentinel_direction = 1
-	pass # Replace with function body.
 
-
-func _on_TimerRight_timeout():
-	sentinel_direction = -1
+func _on_PatrolTimer_timeout():
+	sentinel_direction *= -1
 	pass # Replace with function body.
