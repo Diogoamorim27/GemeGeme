@@ -20,9 +20,10 @@ onready var breath_timer = get_node("Timer_Breath")
 var breath
 var start_time
 var current_time
-export var has_boots = false
 var jump_speed
-#var punching = false
+
+export var has_boots = false
+#export var punching = false
 
 func _ready():
 	state = states.RUN
@@ -139,13 +140,15 @@ func _jump(jump_speed: float) -> void:
 
 
 func _on_Water_body_entered(body):
-	state = states.SWIM
-	breath_timer.start()
-	breath = $Timer_Breath.wait_time
-	start_time = OS.get_unix_time()
+	if body.name == "Player":
+		state = states.SWIM
+		breath_timer.start()
+		breath = $Timer_Breath.wait_time
+		start_time = OS.get_unix_time()
 
 func _on_Water_body_exited(body):
-	state = states.IDLE
+	if body.name == "Player":
+		state = states.IDLE
 
 
 func _on_Timer_Swim_timeout():
@@ -154,3 +157,7 @@ func _on_Timer_Swim_timeout():
 
 func _on_Timer_Breath_timeout():
 	state = states.DEATH
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Player":
+		state = states.DEATH
