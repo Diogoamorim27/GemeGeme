@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/PlaceholderSprites/brown.png" type="Texture" id=1]
 [ext_resource path="res://Assets/PlaceholderSprites/grey.png" type="Texture" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Rope.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Spike.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Platform.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -38,16 +37,16 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="Nivel1Blocos" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 655376, 0, 0, 655377, 1, 0, 720912, 0, 0, 720913, 1, 0, 786448, 0, 0, 786449, 1, 0, 851984, 0, 0, 851985, 1, 0, 917520, 0, 0, 917521, 1, 0, 983056, 0, 0, 983057, 1, 0, 1048592, 0, 0, 1048593, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0 )
+tile_data = PoolIntArray( 589840, 0, 0, 655371, 1, 0, 655376, 0, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655382, 1, 0, 720899, 1, 0, 720900, 1, 0, 720907, 1, 0, 720912, 0, 0, 720913, 1, 0, 720918, 1, 0, 786443, 1, 0, 786448, 0, 0, 786449, 1, 0, 786454, 1, 0, 917503, 1, 0, 851968, 1, 0, 851979, 1, 0, 851984, 0, 0, 851985, 1, 0, 851989, 1, 0, 851990, 1, 0, 917506, 1, 0, 917507, 1, 0, 917515, 1, 0, 917520, 0, 0, 917521, 1, 0, 917525, 1, 0, 917526, 1, 0, 983056, 0, 0, 983057, 1, 0, 983061, 1, 0, 983062, 1, 0, 983070, 1, 0, 983071, 1, 0, 983072, 1, 0, 983073, 1, 0, 1048592, 0, 0, 1048593, 1, 0, 1048598, 1, 0, 1048605, 1, 0, 1048610, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114147, 1, 0, 1114148, 1, 0, 1114149, 1, 0, 1114150, 1, 0, 1114151, 1, 0, 1114152, 1, 0, 1114153, 1, 0, 1114154, 1, 0, 1114155, 1, 0, 1114156, 1, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 312, 520 )
+position = Vector2( 256, 520 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -58,16 +57,21 @@ position = Vector2( 528, 400 )
 [node name="CollisionShape2D" parent="Rope" index="0"]
 position = Vector2( 0, 8 )
 
-[node name="Water" parent="." instance=ExtResource( 5 )]
-position = Vector2( 720, 432 )
-scale = Vector2( 0.883727, 0.861542 )
+[node name="Platforms" type="Node2D" parent="."]
+position = Vector2( 120, 448 )
 
-[node name="Spike" parent="." instance=ExtResource( 6 )]
-position = Vector2( 424, 536 )
+[node name="Platform" parent="Platforms" instance=ExtResource( 5 )]
+position = Vector2( 8, 8 )
+
+[node name="Platform2" parent="Platforms" instance=ExtResource( 5 )]
+position = Vector2( -72, -24 )
+
+[node name="Platform3" parent="Platforms" instance=ExtResource( 5 )]
+position = Vector2( -160, -64 )
+
+[node name="Platform4" parent="Platforms" instance=ExtResource( 5 )]
+position = Vector2( -40, -120 )
 [connection signal="body_entered" from="Rope" to="Player" method="_on_Rope_body_entered"]
 [connection signal="body_exited" from="Rope" to="Player" method="_on_Rope_body_exited"]
-[connection signal="body_entered" from="Water" to="Player" method="_on_Water_body_entered"]
-[connection signal="body_exited" from="Water" to="Player" method="_on_Water_body_exited"]
-[connection signal="body_entered" from="Spike" to="Player" method="_on_Spike_body_entered"]
 
 [editable path="Rope"]

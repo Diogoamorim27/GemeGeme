@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plataforma(1).png-4d979211921d8f611b33fe24a3b908b0.stex"
+path="res://.import/Personagem porta.png-68d0fe5c3b012f34e71e04e5d6ce2dfa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Plataforma(1).png"
-dest_files=[ "res://.import/Plataforma(1).png-4d979211921d8f611b33fe24a3b908b0.stex" ]
+source_file="res://Assets/CharacterArt/Personagem porta.png"
+dest_files=[ "res://.import/Personagem porta.png-68d0fe5c3b012f34e71e04e5d6ce2dfa.stex" ]
 
 [params]
 

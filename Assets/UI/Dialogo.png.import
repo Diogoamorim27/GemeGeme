@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plataforma(1).png-4d979211921d8f611b33fe24a3b908b0.stex"
+path="res://.import/Dialogo.png-4c790b22dcad7039be9fe337c1824a05.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Plataforma(1).png"
-dest_files=[ "res://.import/Plataforma(1).png-4d979211921d8f611b33fe24a3b908b0.stex" ]
+source_file="res://Assets/UI/Dialogo.png"
+dest_files=[ "res://.import/Dialogo.png-4c790b22dcad7039be9fe337c1824a05.stex" ]
 
 [params]
 

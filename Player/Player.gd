@@ -98,17 +98,15 @@ func _process(delta):
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 			
 		states.CLIMB:
-			input = _get_vertical_input_direction()
-			_apply_vertical_movement(input, CLIMB_SPEED)
+			var vinput = _get_vertical_input_direction()
+			_apply_vertical_movement(vinput, CLIMB_SPEED)
 #			_apply_movement(_get_input_direction(), AIR_SPEED)
-			
-#			if _get_input_direction():
-#				state = states.JUMP
-			
+
 			movement = move_and_slide(movement)
 			
 			pass
 			
+	print(state)
 
 func _get_input_direction() -> int:
 	if !(Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left")):

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plataforma(1).png-4d979211921d8f611b33fe24a3b908b0.stex"
+path="res://.import/PonteGr.png-578ed5e15b32766e2c47b734f3ecf127.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Plataforma(1).png"
-dest_files=[ "res://.import/Plataforma(1).png-4d979211921d8f611b33fe24a3b908b0.stex" ]
+source_file="res://Assets/PonteGr.png"
+dest_files=[ "res://.import/PonteGr.png-578ed5e15b32766e2c47b734f3ecf127.stex" ]
 
 [params]
 
