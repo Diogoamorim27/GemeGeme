@@ -28,4 +28,6 @@ cast_to = Vector2( 50, 0 )
 wait_time = 2.0
 autostart = true
 script = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 [connection signal="timeout" from="PatrolTimer" to="." method="_on_PatrolTimer_timeout"]

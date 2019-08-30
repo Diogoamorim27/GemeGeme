@@ -16,11 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="GemeGeme"
+run/main_scene="res://Beginning.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 WorldConstants="*res://WorldConstants.gd"
+GeneralFunctions="*res://GeneralFunctions.gd"
 
 [input]
 

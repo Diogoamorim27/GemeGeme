@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 enum states {RUN, JUMP, DEATH, IDLE, SWIM}
 
-const RUNNING_SPEED = 200
+const RUNNING_SPEED = 100
 const AIR_SPEED = 120
 const GRAVITY = WorldConstants.GRAVITY
 const JUMP = -55 * 3
@@ -139,13 +139,15 @@ func _jump(jump_speed: float) -> void:
 
 
 func _on_Water_body_entered(body):
-	state = states.SWIM
-	breath_timer.start()
-	breath = $Timer_Breath.wait_time
-	start_time = OS.get_unix_time()
+	if body.name == "Player":
+		state = states.SWIM
+		breath_timer.start()
+		breath = $Timer_Breath.wait_time
+		start_time = OS.get_unix_time()
 
 func _on_Water_body_exited(body):
-	state = states.IDLE
+	if body.name == "Player":
+		state = states.IDLE
 
 
 func _on_Timer_Swim_timeout():

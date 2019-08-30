@@ -3,7 +3,6 @@
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player.png" type="Texture" id=2]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.5833
 height = 13.0002
@@ -12,9 +11,10 @@ height = 13.0002
 extents = Vector2( 2.06194, 3.57077 )
 
 [sub_resource type="Animation" id=3]
-resource_name = "Idle"
-length = 0.1
+resource_name = "Run"
+length = 2.0
 loop = true
+step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -22,13 +22,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 1, 2, 3, 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "Jump"
 length = 0.1
 loop = true
@@ -45,7 +45,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -96,7 +96,7 @@ shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 3 )
-anims/Jump = SubResource( 5 )
-anims/Run = SubResource( 4 )
+anims/Jump = SubResource( 4 )
+anims/Run = SubResource( 5 )
 [connection signal="timeout" from="Timer_Swim" to="." method="_on_Timer_Swim_timeout"]
 [connection signal="timeout" from="Timer_Breath" to="." method="_on_Timer_Breath_timeout"]
