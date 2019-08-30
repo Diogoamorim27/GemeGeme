@@ -1,0 +1,69 @@
+fase1 : {
+    "MAURICIO":"Olá Marcos, bom dia!",
+    "MARCOS":"Bom dia Mauricio, como vai?",
+    "MAURICIO":"Bem como sempre, vou abrir aqui para você.",
+    "MARCOS":"Obrigado.",
+    "MARCOS":"O que faz aí em cima, Virgilio?",
+    "VIRGILIO":"Opa! Quis ver a vista daqui de cima, é muito bonita. Quer ver?",
+    "MARCOS":"Claro, mas como você subiu aí?",
+    "VIRGILIO":"Escalando, mas tenho uma coisa que pode ajudá-lo.",
+    //Joga corda
+    "MARCOS":"Realmente você estava certo, a vista daqui é incrível.",
+    "VIRGILIO":"Eu não minto, hahaha!",
+    "MARCOS":"Hahah",
+    "MARCOS":"Enfim, tenho que continuar minha caminhada."
+}
+
+fase2 : {
+    //chega na porta, agora fechada
+    "MARCOS":"...",
+    //chega na casa do lenhador
+    "LEO":"Marcos! Há quanto tempo! O que faz por aqui?",
+    "MARCOS":"Aconteceu um imprevisto, tive que desviar do caminho habitual.",
+    "LEO":"Que bom que você chegou agora, acabei de consertar as pontes nas árvores, não sei o que os moradores desta floresta fariam sem mim, hahahah. Andar pelo chão é muito perigoso, é cheio de espinhos",
+    "MARCOS":"Você ainda tem aquelas botas? Acho que vou precisar delas.",
+    "LEO":"Tenho sim. Só lembra de me devolver depois, essas botas são muito úteis para me deslocar entre as árvores quando as pontes quebram.",
+    "MARCOS":"Por que elas quebram tanto?",
+    "LEO":"O vento é muito forte por aqui. Sorte que eles têm o melhor lenhador da região para consertá-las.",
+    "MARCOS":"Tem outro lenhador na região?",
+    "LEO":"Não...",
+    //chega no pé do penhasco
+    "VIRGILIO":"Bom dia, Marcos!",
+    "MARCOS":"Ainda está aí em cima?",
+    "VIRGILIO":"Mas é claro! Uma vista bonita dessas...",
+    "VIRGILIO":"Você devia passar um tempo aqui comigo, Marcos.",
+    "MARCOS":"Não posso, tenho que seguir em frente.",
+}
+
+fase3 : {
+    //chega na casa do lenhador
+    "LEO":"Bem-vindo de volta, Marcos!",
+    "MARCOS":"Preciso das botas de novo.",
+    "LEO":"Pode pegar, meu amigo. Vou ficar em casa descansando depois de consertar pontes o dia inteiro.",
+    "MARCOS":"Quebraram de novo?",
+    "LEO":"Venta demais por aqui.",
+    //vai até o penhasco, Virgilio não está lá
+    "MARCOS":"Virgilio!!!",
+    //ninguem responde, o chao cai e entra no esgoto
+    "PEDRO":"Marcos!",
+    "MARCOS":"Opa! Tudo bem, Pedro?",
+    "PEDRO":"Aonde está indo, camarada?",
+    "MARCOS":"Apenas caminhando.",
+    "PEDRO":"Bem, toma cuidado com as ratazanas, tem umas enormes aqui embaixo. Isso não deve ser um problema agora, já que eu matei todas no caminho, mas todo dia aparecem novas.",
+}
+
+fase4 : {
+    //chega floresta, nao tem nunhuma ponte
+    "MARCOS":"\"Melhor lenhador da região\"",
+    //entra na area do lago
+    "MULHER":"Olá! Gostaria de uma carona até o outro lado?",
+    "MARCOS":"Claro! Obrigado.",
+    //enquanto atravessam o lado
+}
+
+fase5 : {
+    //vai ate o lago, a mulher nao esta la
+    "MARCOS":"..."
+    //chega ao esgoto pela agua
+    "PEDRO":""
+}

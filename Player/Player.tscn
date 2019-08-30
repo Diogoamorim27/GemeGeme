@@ -1,19 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/PlaceholderSprites/purple.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Player.png" type="Texture" id=3]
+[ext_resource path="res://PlayerSprite.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
+radius = 5.83014
+height = 14.3458
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 2.06194, 3.57077 )
+extents = Vector2( 5.32133, 6.04565 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "Run"
-length = 2.0
 loop = true
-step = 0.2
+step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -21,10 +21,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7 ]
+"values": [ 18, 19 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -44,6 +44,24 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
+[sub_resource type="Animation" id=8]
+resource_name = "Rope"
+length = 0.6
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 8, 9 ]
+}
+
 [sub_resource type="Animation" id=5]
 length = 0.8
 loop = true
@@ -60,27 +78,45 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
+[sub_resource type="Animation" id=7]
+resource_name = "Swim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 10, 11, 12, 13, 14, 15 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 7.2341
+height = 13.3539
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 160, 320.103 )
 script = ExtResource( 1 )
-
-[node name="TestSprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 1.52588e-005, -0.051637 )
-scale = Vector2( 0.5, 0.498387 )
-texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -346.919, -32.4748 )
 scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 offset = Vector2( 236.613, 26.9832 )
-vframes = 3
-hframes = 3
-frame = 2
+vframes = 5
+hframes = 4
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 5.59438, 2.43555 )
+visible = false
+position = Vector2( 5.79351, 6.01389 )
 shape = SubResource( 1 )
 
 [node name="Timer_Swim" type="Timer" parent="."]
@@ -92,14 +128,32 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Punch_Area" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Punch_Area"]
-position = Vector2( 3.92917, -0.501587 )
+visible = false
+position = Vector2( 18.1678, 3.97122 )
 shape = SubResource( 2 )
+
+[node name="Punch_Timer" type="Timer" parent="Punch_Area/CollisionShape2D"]
+wait_time = 0.5
+one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 3 )
 anims/Jump = SubResource( 4 )
+anims/Rope = SubResource( 8 )
 anims/Run = SubResource( 5 )
+anims/Swim = SubResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 6.00592, 6.02069 )
+shape = SubResource( 6 )
 [connection signal="timeout" from="Timer_Swim" to="." method="_on_Timer_Swim_timeout"]
 [connection signal="timeout" from="Timer_Breath" to="." method="_on_Timer_Breath_timeout"]
+[connection signal="body_entered" from="Punch_Area" to="." method="_on_Punch_Area_body_entered"]
+[connection signal="timeout" from="Punch_Area/CollisionShape2D/Punch_Timer" to="." method="_on_Punch_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

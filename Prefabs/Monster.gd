@@ -4,7 +4,7 @@ enum states {SENTINEL, CHASE, DEATH}
 
 const RUNNING_SPEED = 300
 const AIR_SPEED = 120
-const GRAVITY = WorldConstants.GRAVITY
+const GRAVITY = 9.8 * 50
 const RAYCAST_CAST_TO = 10000
 const WALL_CAST_TO = 50
 
@@ -12,6 +12,8 @@ onready var sprite : = $Sprite
 onready var timer : = $PatrolTimer
 onready var raycast : = $RayCastPatrol
 onready var raycast_wall : = $RaycastWall
+
+export var health = 3
 
 var state = states.SENTINEL
 var movement : = Vector2()

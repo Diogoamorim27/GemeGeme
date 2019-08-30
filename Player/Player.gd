@@ -4,13 +4,13 @@ enum states {RUN, JUMP, DEATH, IDLE, SWIM, CLIMB}
 
 const RUNNING_SPEED = 200
 const AIR_SPEED = 120
-const GRAVITY = WorldConstants.GRAVITY
+const GRAVITY = 9.8 * 50
 const JUMP = -55 * 3
 const BOOT_JUMP = -50
 const WATER_FALL_SPEED = 100
 const SWIM_SPEED = 100
 const SWIM_UP = -100
-const WATER_GRAVITY = WorldConstants.GRAVITY * 0.6
+const WATER_GRAVITY = GRAVITY * 0.6
 const CLIMB_SPEED = 100
 
 var balance = 0
@@ -18,21 +18,23 @@ var movement : = Vector2()
 var state
 var enable_swim = true
 onready var breath_timer = get_node("Timer_Breath")
+onready var punch_timer = get_node("Punch_Area/CollisionShape2D/Punch_Timer")
 var breath
 var start_time
 var current_time
-export var has_boots = false
 var jump_speed
-#var punching = false
+
+export var has_boots = false
+export var punching = false
 
 func _ready():
 	state = states.RUN
 	pass # Replace with function body.
 
 func _process(delta):
-	#if Input.is_action_just_pressed("punch"):
-	#	punching = true
-	#	pass
+	if Input.is_action_just_pressed("punch"):
+		punching = true
+		punch_timer.start()
 	if !has_boots:
 		jump_speed = JUMP
 	else:
@@ -72,6 +74,7 @@ func _process(delta):
 			
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 			get_tree().reload_current_scene()
+			#print("died")
 		
 		states.IDLE:
 			$AnimationPlayer.play("Idle")
@@ -86,6 +89,7 @@ func _process(delta):
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)	
 
 		states.SWIM:
+			$AnimationPlayer.play("Swim")
 			current_time = OS.get_unix_time()
 			breath = $Timer_Breath.wait_time - ((current_time - start_time) % 60)
 			print(breath)
@@ -98,6 +102,7 @@ func _process(delta):
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 			
 		states.CLIMB:
+			$AnimationPlayer.play("Rope")
 			var vinput = _get_vertical_input_direction()
 			_apply_vertical_movement(vinput, CLIMB_SPEED)
 #			_apply_movement(_get_input_direction(), AIR_SPEED)
@@ -106,7 +111,7 @@ func _process(delta):
 			
 			pass
 			
-	print(state)
+	#print(state)
 
 func _get_input_direction() -> int:
 	if !(Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left")):
@@ -167,6 +172,7 @@ func _on_Water_body_entered(body):
 
 func _on_Water_body_exited(body):
 	if body.name == "Player":
+		$Timer_Breath.stop()
 		state = states.IDLE
 
 
@@ -176,6 +182,7 @@ func _on_Timer_Swim_timeout():
 
 func _on_Timer_Breath_timeout():
 	state = states.DEATH
+	print("breath")
 
 func _on_Rope_body_entered(body):
 	if body.name == "Player":
@@ -192,4 +199,21 @@ func _on_Rope_body_exited(body):
 func _on_Spike_body_entered(body):
 	if body.name == "Player":
 		state = states.DEATH
+		print("spike")
 	
+
+
+func _on_Punch_Timer_timeout():
+	punching = false
+
+func _on_Punch_Area_body_entered(body):
+	if punching:
+		if body.name == "Monster":
+			body.health -= 1
+			if body.health == 0:
+				body.queue_free()
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Monster":
+		state = states.DEATH
+		print("monster")
