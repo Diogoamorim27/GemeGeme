@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum states {RUN, JUMP, DEATH, IDLE, SWIM_UP}
+enum states {RUN, JUMP, DEATH, IDLE, SWIM}
 
 const RUNNING_SPEED = 200
 const AIR_SPEED = 120
@@ -15,13 +15,17 @@ var balance = 0
 var movement : = Vector2()
 var state
 var enable_swim = true
+onready var breath_timer = get_node("Timer_Breath")
+var breath
+var start_time
+var current_time
 
 func _ready():
 	state = states.RUN
 	pass # Replace with function body.
 
 func _process(delta):
-	print (enable_swim)
+	#print (enable_swim)
 	var input = _get_input_direction()
 	match state:
 		states.RUN:
@@ -65,7 +69,10 @@ func _process(delta):
 				state = states.JUMP
 				
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)	
-		states.SWIM_UP:
+		states.SWIM:
+			current_time = OS.get_unix_time()
+			breath = $Timer_Breath.wait_time - ((current_time - start_time) % 60)
+			print(breath)
 			_sink(delta)
 			_apply_movement(input, SWIM_SPEED)
 			if enable_swim == true and Input.is_action_pressed("ui_up"):
@@ -115,12 +122,18 @@ func _jump(jump_speed: float) -> void:
 
 
 func _on_Water_body_entered(body):
-	state = states.SWIM_UP
-
+	state = states.SWIM
+	breath_timer.start()
+	breath = $Timer_Breath.wait_time
+	start_time = OS.get_unix_time()
 
 func _on_Water_body_exited(body):
 	state = states.IDLE
 
 
-func _on_Timer_timeout():
+func _on_Timer_Swim_timeout():
 	enable_swim = true
+
+
+func _on_Timer_Breath_timeout():
+	state = states.DEATH

@@ -16,9 +16,14 @@ position = Vector2( 64, 480 )
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 
-[node name="Timer" type="Timer" parent="Player"]
+[node name="Timer_Swim" type="Timer" parent="Player"]
 wait_time = 0.5
 autostart = true
+
+[node name="Timer_Breath" type="Timer" parent="Player"]
+wait_time = 10.0
+one_shot = true
 [connection signal="body_entered" from="Water" to="Player" method="_on_Water_body_entered"]
 [connection signal="body_exited" from="Water" to="Player" method="_on_Water_body_exited"]
-[connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Player/Timer_Swim" to="Player" method="_on_Timer_Swim_timeout"]
+[connection signal="timeout" from="Player/Timer_Breath" to="Player" method="_on_Timer_Breath_timeout"]
