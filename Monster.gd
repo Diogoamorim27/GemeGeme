@@ -26,12 +26,12 @@ func _process(delta):
 		states.SENTINEL:
 			_apply_movement(sentinel_direction, RUNNING_SPEED)
 			if raycast.get_collider():
-				print("hi")
 				if raycast.get_collider().name == "Player":
-					print("henlo")
 					state = states.CHASE
 					timer_left.stop()
 					timer_right.stop()
+				
+						
 		states.CHASE:
 			if !raycast.get_collider():
 				state = states.SENTINEL
@@ -46,7 +46,9 @@ func _process(delta):
 	_handle_animation()
 	if !is_on_floor():
 		_apply_gravity(delta)
+		
 	movement = move_and_slide(movement, Vector2.UP)
+#	print(movement)
 	
 func _apply_movement(input : int, speed : float) -> void:
 	movement.x = input * speed

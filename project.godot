@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 WorldConstants="*res://WorldConstants.gd"
+GeneralFunctions="*res://GeneralFunctions.gd"
 
 [input]
 
