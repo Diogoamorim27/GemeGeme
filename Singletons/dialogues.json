@@ -1,0 +1,241 @@
+{
+    "fase1" : [
+        [
+            {
+                "char" : "MAURICIO",
+                
+                "fala" : "Olá Marcos, bom dia!"
+                
+            },
+            {   
+
+                "char": "MARCOS",
+                 "fala": "Bom dia Mauricio, como vai?"
+            },
+
+            {
+                "char": "MAURICIO",
+                 "fala": "Bem como sempre, vou abrir aqui para você."
+            },
+                
+            {
+                "char": "MARCOS",
+                 "fala": "Obrigado."
+            }
+                
+        ],
+        [
+           {
+                "char": "MARCOS",
+                 "fala": "O que faz aí em cima, Virgilio?"
+            },
+                
+            {
+                "char": "VIRGILIO",
+                 "fala": "Opa! Quis ver a vista daqui de cima, é muito bonita. Quer ver?"
+            },
+                
+            {
+                "char": "MARCOS",
+                 "fala": "Claro, mas como você subiu aí?"
+            },
+                
+            {
+                "char": "VIRGILIO",
+                 "fala": "Escalando, mas tenho uma coisa que pode ajudá-lo."
+            },
+                
+            {
+                "char": "MARCOS",
+                 "fala": "Realmente você estava certo, a vista daqui é incrível."
+            },
+                
+            {
+                "char": "VIRGILIO",
+                 "fala": "Eu não minto, hahaha!"
+            },
+                
+            {
+                "char": "MARCOS",
+                 "fala": "Hahah , Enfim, tenho que continuar minha caminhada."
+            }
+       ]
+    ],
+    
+
+    "fase2" : [
+        [
+            {
+                "char": "MARCOS",
+                "fala": "..."
+            },
+        
+            {
+                "char": "LEO",
+                "fala": "Marcos! Há quanto tempo! O que faz por aqui?"
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Aconteceu um imprevisto, tive que desviar do caminho habitual."
+            },
+                
+            {
+                "char": "LEO",
+                "fala": "Que bom que você chegou agora, acabei de consertar as pontes nas árvores, não sei o que os moradores desta floresta fariam sem mim, hahahah. Andar pelo chão é muito perigoso, é cheio de espinhos"
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Você ainda tem aquelas botas? Acho que vou precisar delas."
+            },
+                
+            {
+                "char": "LEO",
+                "fala": "Tenho sim. Só lembra de me devolver depois, essas botas são muito úteis para me deslocar entre as árvores quando as pontes quebram."
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Por que elas quebram tanto?"
+            },
+                
+            {
+                "char": "LEO",
+                "fala": "O vento é muito forte por aqui. Sorte que eles têm o melhor lenhador da região para consertá-las."
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Tem outro lenhador na região?"
+            },
+                
+            {
+                "char": "LEO",
+                "fala": "Não..."
+            }
+        ],  
+        [   
+            {
+                "char": "VIRGILIO",
+                "fala": "Bom dia, Marcos!"
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Ainda está aí em cima?"
+            },
+                
+            {
+                "char": "VIRGILIO",
+                "fala": "Mas é claro! Uma vista bonita dessas..."
+            },
+                
+            {
+                "char": "VIRGILIO",
+                "fala": "Você devia passar um tempo aqui comigo, Marcos."
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Não posso, tenho que seguir em frente."
+            }
+        ]       
+    ],
+
+    "fase3" : [
+        [
+            {
+                "char": "LEO",
+                "fala": "Bem-vindo de volta, Marcos!"
+            },
+        
+            {
+                "char": "MARCOS",
+                "fala": "Preciso das botas de novo."
+            },
+                
+            {
+                "char": "LEO",
+                "fala": "Pode pegar, meu amigo. Vou ficar em casa descansando depois de consertar pontes o dia inteiro."
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Quebraram de novo?"
+            },
+                
+            {
+                "char": "LEO",
+                "fala": "Venta demais por aqui."
+            }
+        ],
+        [      
+            {
+                "char": "MARCOS",
+                "fala": "Virgilio!!!"
+            }
+        ],
+        [       
+            {
+                "char": "PEDRO",
+                "fala": "Marcos!"
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Opa! Tudo bem, Pedro?"
+            },
+                
+            {
+                "char": "PEDRO",
+                "fala": "Aonde está indo, camarada?"
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Apenas caminhando."
+            },
+                
+            {
+                "char": "PEDRO",
+                "fala": "Bem, toma cuidado com as ratazanas, tem umas enormes aqui embaixo. Isso não deve ser um problema agora, já que eu matei todas no caminho, mas todo dia aparecem novas."
+            }
+        ]
+    ],
+
+    "fase4" : [
+        [
+            {
+                "char": "MARCOS",
+                "fala": "\"Melhor lenhador da região\""
+            }
+        ],
+        [        
+            {
+                "char": "MULHER",
+                "fala": "Olá! Gostaria de uma carona até o outro lado?"
+            },
+                
+            {
+                "char": "MARCOS",
+                "fala": "Claro! Obrigado."
+            }
+        ]
+    ],   
+
+    "fase5" : [
+        [
+            {
+                "char": "MARCOS",
+                "fala": "..."
+            }
+        ], 
+        [      
+            {
+                "char": "PEDRO",
+                "fala": ""
+            }
+        ]
+    ]
+}
