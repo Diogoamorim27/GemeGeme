@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Personagem lutador.png-fea127961a64162c60a2e40b4a89ed52.stex"
+path="res://.import/Personagem lutador.png-80a3d13a81a4d4934ce06870c6c97101.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personagem lutador.png"
-dest_files=[ "res://.import/Personagem lutador.png-fea127961a64162c60a2e40b4a89ed52.stex" ]
+source_file="res://Assets/CharacterArt/Personagem lutador.png"
+dest_files=[ "res://.import/Personagem lutador.png-80a3d13a81a4d4934ce06870c6c97101.stex" ]
 
 [params]
 

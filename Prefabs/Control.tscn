@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Levels/Control.gd" type="Script" id=1]
+[ext_resource path="res://Assets/CharacterArt/Personagem porta.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Player-4.png.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/Dialogo.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/Minecraft.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="SpeakerBust" type="TextureRect" parent="."]
+margin_left = 432.0
+margin_top = 184.0
+margin_right = 472.0
+margin_bottom = 224.0
+rect_scale = Vector2( -3, 3 )
+texture = ExtResource( 2 )
+
+[node name="PlayerBust" type="TextureRect" parent="."]
+margin_left = 80.0
+margin_top = 184.0
+margin_right = 120.0
+margin_bottom = 224.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+
+[node name="Dialgue" type="TextureRect" parent="."]
+margin_left = 80.0
+margin_top = 64.0
+margin_right = 120.0
+margin_bottom = 104.0
+rect_scale = Vector2( 11, 7 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 96.0
+margin_top = 240.0
+margin_right = 136.0
+margin_bottom = 275.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "halo
+"
+__meta__ = {
+"_edit_lock_": true
+}
