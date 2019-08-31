@@ -230,15 +230,88 @@
                 "fala": "\"Melhor lenhador da região\""
             }
         ],
+        [
+            {
+                "char" : "MARCOS",
+                "fala" : "Leo?"
+            }
+        ],
         [        
             {
                 "char": "MULHER",
-                "fala": "Olá! Gostaria de uma carona até o outro lado?"
+                "fala": "..."
             },
                 
             {
                 "char": "MARCOS",
-                "fala": "Claro! Obrigado."
+                "fala": "Eu não conhecia esse caminho."
+            },
+            {
+                "char": "MARCOS",
+                "fala": "Eu tenho sido obrigado a dar tantas voltas que estou passando por lugares que eu nem conhecia."
+            },
+
+            {
+                "char": "MARCOS",
+                "fala": "Aliás, eu acho que também não te conheço."
+            },
+
+            {
+                "char": "MARCOS",
+                "fala": "E olha que eu vivo aqui há séculos. Qual o seu nome? Eu me chamo Marcos."
+            },
+
+            {
+                "char": "MULHER",
+                "fala": "Eu me chamo Carol."
+            },
+
+            {
+                "char": "MULHER",
+                "fala":  "Esse caminho é pouco usado, mas todo mundo acaba me conhecendo no final."
+            },
+
+            {
+                "char": "MULHER",
+                "fala":  "Você quer seguir em frente? Também posso te levar pra casa."
+            },
+
+            {
+                "char": "MARCOS",
+                "fala":  "Não, eu preciso continuar."
+            },
+
+            {
+                "char": "MULHER",
+                "fala":  "..."
+            },
+
+            {
+                "char": "MULHER",
+                "fala":  "Você tem uma moeda?"
+            },
+
+            {
+                "char": "MARCOS",
+                "fala":  "Não."
+            },
+
+            {
+                "char": "MULHER",
+                "fala":  "Tudo bem. Sobe."
+            }
+
+        ],
+        [
+            {
+                "char" : "MARCOS",
+                "fala" : "Bom dia."
+            },
+
+            {
+                "char" : "PEDRO",
+                "fala" : "Bom dia, Marcos."
+
             }
         ]
     ],   
@@ -247,14 +320,102 @@
         [
             {
                 "char": "MARCOS",
-                "fala": "..."
+                "fala": "Ainda matando ratos amigo?"
+            },
+              
+            {
+                "char": "PEDRO",
+                "fala": "Eles não param de vir, mas acho que to ficando velho"
+            },
+        
+            {
+                "char": "MARCOS",
+                "fala": "Que isso? Você está em ótima forma"
+            },
+              
+            {
+                "char": "PEDRO",
+                "fala": "Já tive meus dias de glória, lutava contra outros cavaleiros e monstros"
+            },
+              
+            {
+                "char": "PEDRO",
+                "fala": "Hoje vivo matando ratos e logo mais nem para isso servirei"
+            },
+        
+            {
+                "char": "MARCOS",
+                "fala": "Que nada, enfim, tenho que ir, preciso continuar em frente, até logo"
+            }
+        ]
+    ],
+    
+    "fase6" : [
+        [
+            {
+                "char": "Morte",
+                "fala": "O que deseja Marcos?"
             }
         ], 
         [      
             {
-                "char": "PEDRO",
-                "fala": ""
+                "char": "Marcos",
+                "fala": "Eu não sei, tudo parece sem sentido..."
             }
-        ]
-    ]
+        ],
+        [
+            {
+                "char": "Morte",
+                "fala": "Sentido é a última coisa que a vida tem"
+            }
+        ], 
+        [      
+            {
+                "char": "Marcos",
+                "fala": "Eu vivi todos esses anos vendo todos a minha volta desaparecer e eu continuar aqui..."
+            }
+        ],
+        [      
+            {
+                "char": "Marcos",
+                "fala": "E agora todos se foram e o que resta?"
+            }
+        ],
+        [
+            {
+                "char": "Morte",
+                "fala": "Não resta nada..."
+            }
+        ],  
+        [      
+            {
+                "char": "Marcos",
+                "fala": "Então depois de tanto tempo é assim que termina?"
+            }
+        ],
+        [
+            {
+                "char": "Morte",
+                "fala": "Como eu falei sentido é a última coisa que a vida tem"
+            }
+        ], 
+        [      
+            {
+                "char": "Marcos",
+                "fala": "Realmente, acho que agora entendo, o ciclo é necessário para que tenhamos algum sentido, algum motivo..."
+            }
+        ], 
+        [      
+            {
+                "char": "Marcos",
+                "fala": "Nunca pensei em falar isso, mas acho que minha hora está chegando"
+            }
+        ],
+        [
+            {
+                "char": "Morte",
+                "fala": "Quando estiver pronto venha..."
+            }
+        ] 
+    ]    
 }

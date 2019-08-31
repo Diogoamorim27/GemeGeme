@@ -8,8 +8,8 @@ const GRAVITY = 9.8 * 50
 const JUMP = -55 * 3
 const BOOT_JUMP = -50 * 2
 const WATER_FALL_SPEED = 100
-const SWIM_SPEED = 100
-const SWIM_UP = -100
+const SWIM_SPEED = 110
+const SWIM_UP = -130
 const WATER_GRAVITY = GRAVITY * 0.6
 const CLIMB_SPEED = 100
 
@@ -24,6 +24,7 @@ var start_time
 var current_time
 var jump_speed
 var has_key : = false
+var on_water = 0
 
 export var has_boots = false
 export var punching = false
@@ -173,15 +174,19 @@ func _jump(jump_speed: float) -> void:
 
 func _on_Water_body_entered(body):
 	if body.name == "Player":
+		if on_water == 0:
+			breath_timer.start()
+			breath = $Timer_Breath.wait_time
+			start_time = OS.get_unix_time()
+		on_water += 1
 		state = states.SWIM
-		breath_timer.start()
-		breath = $Timer_Breath.wait_time
-		start_time = OS.get_unix_time()
 
 func _on_Water_body_exited(body):
 	if body.name == "Player":
-		$Timer_Breath.stop()
-		state = states.IDLE
+		on_water -= 1
+		if on_water == 0:
+			$Timer_Breath.stop()
+			state = states.IDLE
 
 
 func _on_Timer_Swim_timeout():

@@ -44,7 +44,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 resource_name = "Rope"
 length = 0.6
 loop = true
@@ -62,7 +62,7 @@ tracks/0/keys = {
 "values": [ 8, 9 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=6]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -125,7 +125,7 @@ wait_time = 0.5
 autostart = true
 
 [node name="Timer_Breath" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 25.0
 one_shot = true
 
 [node name="Punch_Area" type="Area2D" parent="."]
@@ -143,8 +143,8 @@ one_shot = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 3 )
 anims/Jump = SubResource( 4 )
-anims/Rope = SubResource( 9 )
-anims/Run = SubResource( 10 )
+anims/Rope = SubResource( 5 )
+anims/Run = SubResource( 6 )
 anims/Swim = SubResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]

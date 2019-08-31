@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/PropSprites/Decoração1.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/árvorep.png" type="Texture" id=2]
+
+[node name="Decoracoes" type="Node"]
+editor/display_folded = true
+
+[node name="Arbusto" type="Sprite" parent="."]
+position = Vector2( -226.868, 521.57 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 2
+
+[node name="Arbusto2" type="Sprite" parent="."]
+position = Vector2( -489.022, 521.57 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 2
+
+[node name="Arbusto3" type="Sprite" parent="."]
+position = Vector2( 199.642, 521.212 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 2
+
+[node name="Arbusto4" type="Sprite" parent="."]
+position = Vector2( 464, 522.389 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 2
+
+[node name="Arbusto5" type="Sprite" parent="."]
+position = Vector2( 949.491, 394.264 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 2
+
+[node name="Arbusto6" type="Sprite" parent="."]
+position = Vector2( 1188.15, 522.489 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 2
+
+[node name="árvorep" type="Sprite" parent="."]
+position = Vector2( 1070.65, 515.593 )
+scale = Vector2( 1.5, 1.8 )
+texture = ExtResource( 2 )
+
+[node name="árvorep2" type="Sprite" parent="."]
+position = Vector2( 1356.72, 515.951 )
+scale = Vector2( 1.5, 1.8 )
+texture = ExtResource( 2 )
+
+[node name="árvorep3" type="Sprite" parent="."]
+position = Vector2( 712.88, 515.593 )
+scale = Vector2( 1.5, 1.8 )
+texture = ExtResource( 2 )
+
+[node name="árvorep4" type="Sprite" parent="."]
+position = Vector2( 113.491, 515.951 )
+scale = Vector2( 1.5, 1.8 )
+texture = ExtResource( 2 )
+
+[node name="árvorep5" type="Sprite" parent="."]
+position = Vector2( -27.7529, 515.593 )
+scale = Vector2( 1.5, 1.8 )
+texture = ExtResource( 2 )
+
+[node name="Decoração1" type="Sprite" parent="."]
+position = Vector2( 35.6539, 528.14 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+
+[node name="Decoração2" type="Sprite" parent="."]
+position = Vector2( 1116.85, 527.064 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+
+[node name="Decoração3" type="Sprite" parent="."]
+position = Vector2( 1251.64, 524.913 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 5
+
+[node name="Decoração4" type="Sprite" parent="."]
+position = Vector2( 1295.72, 524.913 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 5

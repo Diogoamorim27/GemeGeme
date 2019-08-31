@@ -1,6 +1,6 @@
 extends Control
 
-export (String, "fase1", "fase2", "fase3", "fase4", "fase5") var fase 
+export (String, "fase1", "fase2", "fase3", "fase4", "fase5", "fase6") var fase 
 
 var current_dialog 
 var dialog_active = false
@@ -39,6 +39,7 @@ func _process(delta):
 					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_porta.png")
 					pass
 				"MULHER":
+					$SpeakerBust.texture = load("res://Prefabs/Mulher Barco.png")
 					pass
 				"LEO":
 					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_lenhador.png")
@@ -97,8 +98,18 @@ func _fetch_dialog(character : String):
 				return DialogDict.data.fase3[2]
 			pass
 		"fase4":
+			if character == "mulher":
+				return DialogDict.data.fase4[2]
+			elif character == "leo":
+				return DialogDict.data.fase4[1]
+			elif character == "subleo":
+				return DialogDict.data.fase4[0]
+			elif character == "pedro":
+				return DialogDict.data.fase4[3]
 			pass
 		"fase5":
+			if character == "pedro":
+				return DialogDict.data.fase5[0]
 			pass
 			
 			
@@ -136,4 +147,18 @@ func _on_Pedro_body_entered(body):
 	if body.name == "Player":
 		visible = true
 		_start_dialog("pedro")
+	pass # Replace with function body.
+
+
+func _on_AreaMulher_body_entered(body):
+	if body.name == "Player":
+		visible = true
+		_start_dialog("mulher")
+	pass # Replace with function body.
+
+
+func _on_SubLeo_body_entered(body):
+	if body.name == "Player":
+		visible = true
+		_start_dialog("subleo")
 	pass # Replace with function body.

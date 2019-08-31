@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/MulherBarco.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Mulher Barco.png" type="Texture" id=2]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( -0.330193, -9.48731 )
+b = Vector2( -0.529076, 16.1683 )
+
+[node name="MulherBarco" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -4, -4 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -8 )
+build_mode = 1
+polygon = PoolVector2Array( -16.1834, 7.164, -15.0895, 13.2299, 0.323704, 13.6276, 7.88117, 7.56176 )
+
+[node name="AreaMulher" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMulher"]
+position = Vector2( -23.4107, -8.35299 )
+shape = SubResource( 1 )

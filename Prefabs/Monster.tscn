@@ -1,18 +1,22 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Prefabs/Monster.gd" type="Script" id=1]
-[ext_resource path="res://Assets/PlaceholderSprites/red.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Rato.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 11.1106 )
 
 [node name="Monster" type="KinematicBody2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0030899, 3.87491 )
 shape = SubResource( 1 )
 
 [node name="RaycastWall" type="RayCast2D" parent="."]
