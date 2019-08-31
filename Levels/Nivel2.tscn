@@ -520,11 +520,7 @@ position = Vector2( -1432, 728 )
 scale = Vector2( 1.09218, 1.32908 )
 
 [node name="Platforms" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -64, -40 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Platform" parent="Platforms" instance=ExtResource( 24 )]
 position = Vector2( -152, 416 )
@@ -539,7 +535,7 @@ position = Vector2( -224, 344 )
 position = Vector2( -64, 304 )
 
 [node name="Platform5" parent="Platforms" instance=ExtResource( 24 )]
-position = Vector2( -8.26581, 224 )
+position = Vector2( -13.8322, 233.175 )
 
 [node name="Platform6" parent="Platforms" instance=ExtResource( 24 )]
 position = Vector2( -152, 200 )
@@ -567,8 +563,8 @@ shape = SubResource( 3 )
 [connection signal="body_entered" from="Chave" to="Chave" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Chave" to="Player" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Galhos/Spike18" to="Player" method="_on_Spike_body_entered"]
-[connection signal="body_entered" from="Maurício" to="CanvasLayer/Control" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Maurício" to="Porta" method="_on_Maurcio_body_entered"]
+[connection signal="body_entered" from="Maurício" to="CanvasLayer/Control" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Virgilio" to="CanvasLayer/Control" method="_on_Virgilio_body_entered"]
 [connection signal="body_entered" from="Virgilio/Subvirgilio" to="CanvasLayer/Control" method="_on_Subvirgilio_body_entered"]
 [connection signal="body_entered" from="Spikes/Spike" to="Player" method="_on_Spike_body_entered"]

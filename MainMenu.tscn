@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Background/BackgroudNew1.png" type="Texture" id=1]
 [ext_resource path="res://Control.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Background/titulo_branco.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/Iniciar_normal.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/Iniciar_hover.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/Sair_hover.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/Sair_normal.png" type="Texture" id=7]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -41,27 +45,23 @@ margin_right = 487.631
 margin_bottom = 311.631
 texture = ExtResource( 3 )
 
-[node name="CenterContainer" type="CenterContainer" parent="Control"]
-margin_left = 103.579
-margin_top = 74.3304
-margin_right = 345.579
-margin_bottom = 217.33
+[node name="Start_button" type="TextureButton" parent="Control"]
+margin_left = 151.631
+margin_top = 95.6308
+margin_right = 407.631
+margin_bottom = 351.631
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
-margin_left = 100.0
-margin_top = 49.0
-margin_right = 142.0
-margin_bottom = 93.0
-
-[node name="Start_button" type="Button" parent="Control/CenterContainer/VBoxContainer"]
-margin_right = 42.0
-margin_bottom = 20.0
-text = "Jogar"
-
-[node name="Exit_button" type="Button" parent="Control/CenterContainer/VBoxContainer"]
-margin_top = 24.0
-margin_right = 42.0
-margin_bottom = 44.0
-text = "Sair"
-[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Start_button" to="Control" method="_on_Start_button_pressed"]
-[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Exit_button" to="Control" method="_on_Exit_button_pressed"]
+[node name="Exit_button" type="TextureButton" parent="Control"]
+margin_left = 151.631
+margin_top = 159.631
+margin_right = 407.631
+margin_bottom = 415.631
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+[connection signal="pressed" from="Control/Start_button" to="Control" method="_on_Start_button_pressed"]

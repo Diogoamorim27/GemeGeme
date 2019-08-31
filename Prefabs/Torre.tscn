@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/PropSprites/Torrev1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/SFX/GateClosing.wav" type="AudioStream" id=2]
+[ext_resource path="res://Prefabs/AudioStreamPlayer.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Close"
@@ -48,3 +50,12 @@ frame = 4
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Close"
 anims/Close = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Timer" to="AudioStreamPlayer" method="_on_Timer_timeout"]
