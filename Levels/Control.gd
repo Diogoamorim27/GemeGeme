@@ -15,6 +15,13 @@ func _ready():
 
 func _process(delta):
 	if dialog_active:
+		
+		if Input.is_action_just_pressed("ui_accept"):
+			if dialog_index < current_dialog.size() - 1:
+				dialog_index += 1
+			else:
+				_finish_dialog()
+	
 		$Label.text = current_dialog[dialog_index].fala
 		
 		if current_dialog[dialog_index].char == "MARCOS":
@@ -33,6 +40,7 @@ func _process(delta):
 				"MULHER":
 					pass
 				"LEO":
+					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_lenhador.png")
 					pass
 			$PlayerBust.visible = false
 			$SpeakerBust.visible = true
@@ -46,6 +54,8 @@ func _on_Maurcio_body_entered(body):
 
 func _start_dialog(character : String):
 	current_dialog = _fetch_dialog(character)
+	if !current_dialog:
+		_finish_dialog()
 	if !past_dialogs.has(current_dialog):
 		dialog_active = true
 		visible = true
@@ -66,6 +76,15 @@ func _fetch_dialog(character : String):
 			elif character == "virgilio2":
 				return DialogDict.data.fase1[2]
 		"fase2":
+			if character == "leo":
+				player.has_boots = true
+				return DialogDict.data.fase2[1]
+			elif character == "mauricio":
+				return DialogDict.data.fase2[0]
+			elif character == "virgilio":
+				return DialogDict.data.fase2[2]
+			elif character == "virgilio2":
+				return null
 			pass
 		"fase3":
 			pass
@@ -75,13 +94,6 @@ func _fetch_dialog(character : String):
 			pass
 			
 			
-func _on_Dialgue_gui_input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if dialog_active and dialog_index < current_dialog.size() - 1:
-			dialog_index += 1	
-		else:
-			_finish_dialog()
-
 func _finish_dialog():
 	past_dialogs.append(current_dialog)
 	visible = false
@@ -102,4 +114,11 @@ func _on_Subvirgilio_body_entered(body):
 	if body.name == "Player":
 		visible = true
 		_start_dialog("virgilio2")
+	pass # Replace with function body.
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Player":
+		visible = true
+		_start_dialog("leo")
 	pass # Replace with function body.

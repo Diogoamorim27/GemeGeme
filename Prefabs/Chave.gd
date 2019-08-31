@@ -13,7 +13,6 @@ func _ready():
 #	pass
 
 
-func _on_Exit_body_entered(body):
+func _on_Chave_body_entered(body):
 	if body.name == "Player":
-		get_tree().change_scene("res://Levels/Nivel2.tscn")
-	pass # Replace with function body.
+		self.queue_free()

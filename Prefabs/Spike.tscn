@@ -1,14 +1,17 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/PlaceholderSprites/vomit.png" type="Texture" id=1]
+[ext_resource path="res://Assets/PlaceholderSprites/Espinhos.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 8 )
+extents = Vector2( 30.2224, 9.77943 )
 
 [node name="Spike" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 14.5864, -10.8595 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 16, -8 )
+scale = Vector2( 2, 1.75 )
 texture = ExtResource( 1 )

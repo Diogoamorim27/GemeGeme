@@ -71,7 +71,8 @@
                 "char": "MARCOS",
                 "fala": "..."
             },
-        
+        ],
+        [
             {
                 "char": "LEO",
                 "fala": "Marcos! Há quanto tempo! O que faz por aqui?"
@@ -84,9 +85,20 @@
                 
             {
                 "char": "LEO",
-                "fala": "Que bom que você chegou agora, acabei de consertar as pontes nas árvores, não sei o que os moradores desta floresta fariam sem mim, hahahah. Andar pelo chão é muito perigoso, é cheio de espinhos"
+                "fala": "Que bom que você chegou agora, acabei de consertar as pontes nas árvores"
+                
+            },
+
+            {
+                "char": "LEO",
+                "fala": " Não sei o que os moradores desta floresta fariam sem mim, hahah."
             },
                 
+            {
+                "char": "LEO",
+                "fala": " Andar pelo chão é muito perigoso, é cheio de espinhos"
+            },
+
             {
                 "char": "MARCOS",
                 "fala": "Você ainda tem aquelas botas? Acho que vou precisar delas."

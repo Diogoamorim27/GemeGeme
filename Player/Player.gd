@@ -6,7 +6,7 @@ const RUNNING_SPEED = 200
 const AIR_SPEED = 120
 const GRAVITY = 9.8 * 50
 const JUMP = -55 * 3
-const BOOT_JUMP = -50
+const BOOT_JUMP = -50 * 2
 const WATER_FALL_SPEED = 100
 const SWIM_SPEED = 100
 const SWIM_UP = -100
@@ -23,6 +23,7 @@ var breath
 var start_time
 var current_time
 var jump_speed
+var has_key : = false
 
 export var has_boots = false
 export var punching = false
@@ -224,3 +225,9 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Monster":
 		state = states.DEATH
 		print("monster")
+
+
+func _on_Chave_body_entered(body):
+	if body.name == "Player":
+		has_key = true
+	pass # Replace with function body.

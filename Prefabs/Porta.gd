@@ -15,3 +15,12 @@ func _on_Dialgue_hide():
 			$CollisionShape2D.disabled = true
 			has_played = true
 	pass # Replace with function body.
+
+
+func _on_Maurcio_body_entered(body):
+	if body.name == "Player" and !has_played:
+		if body.has_key:
+			$AnimationPlayer.play("Open")
+			$CollisionShape2D.queue_free()
+			has_played = true
+	pass # Replace with function body.

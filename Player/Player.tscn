@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.83014
-height = 14.3458
+height = 20.9528
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.32133, 6.04565 )
@@ -44,7 +44,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=9]
 resource_name = "Rope"
 length = 0.6
 loop = true
@@ -62,7 +62,7 @@ tracks/0/keys = {
 "values": [ 8, 9 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=10]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -117,8 +117,7 @@ hframes = 4
 frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 5.79351, 6.01389 )
+position = Vector2( 5.44386, 9.51038 )
 shape = SubResource( 1 )
 
 [node name="Timer_Swim" type="Timer" parent="."]
@@ -144,8 +143,8 @@ one_shot = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 3 )
 anims/Jump = SubResource( 4 )
-anims/Rope = SubResource( 5 )
-anims/Run = SubResource( 6 )
+anims/Rope = SubResource( 9 )
+anims/Run = SubResource( 10 )
 anims/Swim = SubResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]
