@@ -19,9 +19,9 @@ var state
 var enable_swim = true
 onready var breath_timer = get_node("Timer_Breath")
 onready var punch_timer = get_node("Punch_Area/CollisionShape2D/Punch_Timer")
-var breath
-var start_time
-var current_time
+var breath 
+var start_time = 0
+var current_time = 0
 var jump_speed
 var has_key : = false
 var on_water = 0
@@ -30,6 +30,7 @@ export var has_boots = false
 export var punching = false
 
 func _ready():
+	breath = $Timer_Breath.wait_time
 	state = states.RUN
 	pass # Replace with function body.
 
@@ -44,13 +45,18 @@ func _process(delta):
 	var input = _get_input_direction()
 	match state:
 		states.RUN:
+			$AudioAgua.playing = false
+			if !$AudioAndar.playing:
+				$AudioAndar.playing = true
 			_apply_movement(input, RUNNING_SPEED)
 			$AnimationPlayer.play("Run")
 			
+				
 			if is_on_floor():
 				if input == 0:
 					state = states.IDLE
 				elif Input.is_action_pressed("ui_up"):
+					
 					_jump(jump_speed)
 			else:
 				state = states.JUMP
@@ -58,6 +64,8 @@ func _process(delta):
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 		
 		states.JUMP:
+			$AudioAndar.playing = false
+			$AudioAgua.playing = false
 			$AnimationPlayer.play("Jump")
 			_apply_gravity(delta)
 			_apply_movement(input, AIR_SPEED)
@@ -71,6 +79,8 @@ func _process(delta):
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 		
 		states.DEATH:
+			$AudioAndar.playing = false
+			$AudioAgua.playing = false
 			_apply_movement(0, 0)
 			_apply_gravity(delta)
 			
@@ -79,6 +89,8 @@ func _process(delta):
 			#print("died")
 		
 		states.IDLE:
+			$AudioAndar.playing = false
+			$AudioAgua.playing = false
 			$AnimationPlayer.play("Idle")
 			if is_on_floor():
 				if input != 0:
@@ -91,9 +103,11 @@ func _process(delta):
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)	
 
 		states.SWIM:
+			$AudioAndar.playing = false
 			$AnimationPlayer.play("Swim")
 			current_time = OS.get_unix_time()
 			breath = $Timer_Breath.wait_time - ((current_time - start_time) % 60)
+			$Label.text = String(breath)
 			print(breath)
 			_sink(delta)
 			_apply_movement(input, SWIM_SPEED)
@@ -104,6 +118,8 @@ func _process(delta):
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 			
 		states.CLIMB:
+			$AudioAndar.playing = false
+			$AudioAgua.playing = false			
 			$AnimationPlayer.play("Rope")
 			var vinput = _get_vertical_input_direction()
 			_apply_vertical_movement(vinput, CLIMB_SPEED)
@@ -114,12 +130,17 @@ func _process(delta):
 			pass
 			
 		states.INTERACTING:
+			$AudioAndar.playing = false
+			$AudioAgua.playing = false			
 			$AnimationPlayer.play("Idle")
 			_apply_movement(0, 0)
 			_apply_gravity(delta)
 			
 			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
+
 			
+	## AUDIO HANDLING ##
+
 	#print(state)
 
 func _get_input_direction() -> int:
@@ -175,6 +196,7 @@ func _jump(jump_speed: float) -> void:
 func _on_Water_body_entered(body):
 	if body.name == "Player":
 		if on_water == 0:
+			$AudioAgua.playing = true
 			breath_timer.start()
 			breath = $Timer_Breath.wait_time
 			start_time = OS.get_unix_time()

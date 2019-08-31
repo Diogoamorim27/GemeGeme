@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Assets/Background/BackgroudNew1.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Control.tscn" type="PackedScene" id=2]
@@ -121,6 +121,9 @@
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 24.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 92 )
 
 [node name="Nivel2" type="Node2D"]
 
@@ -430,6 +433,40 @@ position = Vector2( 56, -7.99976 )
 position = Vector2( -1488, 488 )
 
 [node name="Decoracoes" parent="." instance=ExtResource( 18 )]
+editor/display_folded = false
+
+[node name="Arbusto" parent="Decoracoes" index="0"]
+z_index = -1
+
+[node name="Arbusto2" parent="Decoracoes" index="1"]
+z_index = -1
+
+[node name="Arbusto3" parent="Decoracoes" index="2"]
+z_index = 1
+
+[node name="Arbusto4" parent="Decoracoes" index="3"]
+z_index = -1
+
+[node name="Arbusto5" parent="Decoracoes" index="4"]
+z_index = -1
+
+[node name="Arbusto6" parent="Decoracoes" index="5"]
+z_index = -1
+
+[node name="árvorep" parent="Decoracoes" index="6"]
+z_index = -1
+
+[node name="árvorep2" parent="Decoracoes" index="7"]
+z_index = -1
+
+[node name="árvorep3" parent="Decoracoes" index="8"]
+z_index = -1
+
+[node name="Decoração3" parent="Decoracoes" index="13"]
+z_index = 1
+
+[node name="Decoração4" parent="Decoracoes" index="14"]
+z_index = 1
 
 [node name="Player" parent="." instance=ExtResource( 19 )]
 position = Vector2( -96, 516.625 )
@@ -519,12 +556,19 @@ scale = Vector2( 1.2, 0.759 )
 editor/display_folded = true
 position = Vector2( 1856, 608 )
 scale = Vector2( 0.8, 0.506 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -1472, 404 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 3 )
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="Porta" method="_on_Dialgue_hide"]
 [connection signal="body_entered" from="Chave" to="Chave" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Chave" to="Player" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Galhos/Spike18" to="Player" method="_on_Spike_body_entered"]
-[connection signal="body_entered" from="Maurício" to="Porta" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Maurício" to="CanvasLayer/Control" method="_on_Maurcio_body_entered"]
+[connection signal="body_entered" from="Maurício" to="Porta" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Virgilio" to="CanvasLayer/Control" method="_on_Virgilio_body_entered"]
 [connection signal="body_entered" from="Virgilio/Subvirgilio" to="CanvasLayer/Control" method="_on_Subvirgilio_body_entered"]
 [connection signal="body_entered" from="Spikes/Spike" to="Player" method="_on_Spike_body_entered"]
@@ -567,6 +611,8 @@ scale = Vector2( 0.8, 0.506 )
 [editable path="Virgilio"]
 
 [editable path="ArvoreFloresta4"]
+
+[editable path="Decoracoes"]
 
 [editable path="personagem_lenhador"]
 

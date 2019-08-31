@@ -166,6 +166,40 @@ position = Vector2( 808, 376 )
 position = Vector2( -16.1735, 140.799 )
 
 [node name="Decoracoes" parent="Virgilio" instance=ExtResource( 13 )]
+editor/display_folded = false
+
+[node name="Arbusto" parent="Virgilio/Decoracoes" index="0"]
+z_index = -1
+
+[node name="Arbusto2" parent="Virgilio/Decoracoes" index="1"]
+z_index = -1
+
+[node name="Arbusto3" parent="Virgilio/Decoracoes" index="2"]
+z_index = 1
+
+[node name="Arbusto4" parent="Virgilio/Decoracoes" index="3"]
+z_index = -1
+
+[node name="Arbusto5" parent="Virgilio/Decoracoes" index="4"]
+z_index = -1
+
+[node name="árvorep" parent="Virgilio/Decoracoes" index="6"]
+z_index = -1
+
+[node name="árvorep2" parent="Virgilio/Decoracoes" index="7"]
+z_index = -1
+
+[node name="árvorep3" parent="Virgilio/Decoracoes" index="8"]
+z_index = -1
+
+[node name="Decoração2" parent="Virgilio/Decoracoes" index="12"]
+z_index = -1
+
+[node name="Decoração3" parent="Virgilio/Decoracoes" index="13"]
+z_index = 1
+
+[node name="Decoração4" parent="Virgilio/Decoracoes" index="14"]
+z_index = 1
 
 [node name="Subvirgilio" type="Area2D" parent="Virgilio"]
 
@@ -242,6 +276,8 @@ scale = Vector2( 0.8, 0.506 )
 [editable path="CanvasLayer/Control"]
 
 [editable path="Virgilio"]
+
+[editable path="Virgilio/Decoracoes"]
 
 [editable path="Rope"]
 

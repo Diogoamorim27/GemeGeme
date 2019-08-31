@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bensound-ofeliasdream.ogg-11b9a4fcec27942d0e928b83df0c9a6e.oggstr"
+
+[deps]
+
+source_file="res://Assets/SFX/bensound-ofeliasdream.ogg"
+dest_files=[ "res://.import/bensound-ofeliasdream.ogg-11b9a4fcec27942d0e928b83df0c9a6e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

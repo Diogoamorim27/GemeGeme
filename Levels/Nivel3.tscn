@@ -1,29 +1,29 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Assets/Background/BackgroudNew1.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Control.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Torre.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Chave.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Chave.gd" type="Script" id=5]
-[ext_resource path="res://Prefabs/TileMap2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/ChaoQuebra.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Prefabs/ChaoQuebra.gd" type="Script" id=8]
-[ext_resource path="res://Assets/PropSprites/Cemitério.png" type="Texture" id=9]
-[ext_resource path="res://Assets/PropSprites/Decoração1.png" type="Texture" id=10]
-[ext_resource path="res://Assets/TIleMapChaov2.png" type="Texture" id=11]
-[ext_resource path="res://Assets/PropSprites/CanosEnfeite.png" type="Texture" id=12]
-[ext_resource path="res://Assets/PropSprites/Canos.png" type="Texture" id=13]
-[ext_resource path="res://Assets/PropSprites/Escada.png" type="Texture" id=14]
-[ext_resource path="res://Prefabs/Spike.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Prefabs/Galho.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Exit.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Prefabs/Porta.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Prefabs/Maurício.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Prefabs/Virgilio.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Prefabs/ArvoreTronco.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Prefabs/CasaLenhador.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Prefabs/Pedro.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Prefabs/Decoracoes.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Prefabs/Decoracoes.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Chave.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Chave.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/TileMap2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/ChaoQuebra.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/ChaoQuebra.gd" type="Script" id=9]
+[ext_resource path="res://Assets/PropSprites/Cemitério.png" type="Texture" id=10]
+[ext_resource path="res://Assets/PropSprites/Decoração1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/TIleMapChaov2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/PropSprites/CanosEnfeite.png" type="Texture" id=13]
+[ext_resource path="res://Assets/PropSprites/Canos.png" type="Texture" id=14]
+[ext_resource path="res://Assets/PropSprites/Escada.png" type="Texture" id=15]
+[ext_resource path="res://Prefabs/Spike.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Galho.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Exit.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Porta.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Maurício.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Prefabs/Virgilio.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Prefabs/ArvoreTronco.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Prefabs/CasaLenhador.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Prefabs/Pedro.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Assets/Rato.png" type="Texture" id=26]
 [ext_resource path="res://Prefabs/Leo.tscn" type="PackedScene" id=27]
@@ -36,7 +36,7 @@
 
 [sub_resource type="TileSet" id=1]
 0/name = "Cemitério.png 0"
-0/texture = ExtResource( 9 )
+0/texture = ExtResource( 10 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -46,7 +46,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Cemitério.png 1"
-1/texture = ExtResource( 9 )
+1/texture = ExtResource( 10 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 32, 0, 32, 32 )
@@ -56,7 +56,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Decoração1.png 2"
-2/texture = ExtResource( 10 )
+2/texture = ExtResource( 11 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 32, 32 )
@@ -66,7 +66,7 @@
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Decoração1.png 3"
-3/texture = ExtResource( 10 )
+3/texture = ExtResource( 11 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 32, 0, 32, 32 )
@@ -76,7 +76,7 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Decoração1.png 4"
-4/texture = ExtResource( 10 )
+4/texture = ExtResource( 11 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 32, 32, 32, 32 )
@@ -86,7 +86,7 @@
 4/shapes = [  ]
 4/z_index = 0
 5/name = "Decoração1.png 5"
-5/texture = ExtResource( 10 )
+5/texture = ExtResource( 11 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 32, 32, 32 )
@@ -96,7 +96,7 @@
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Decoração1.png 6"
-6/texture = ExtResource( 10 )
+6/texture = ExtResource( 11 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 32, 64, 32, 32 )
@@ -106,7 +106,7 @@
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Decoração1.png 7"
-7/texture = ExtResource( 10 )
+7/texture = ExtResource( 11 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 64, 32, 32 )
@@ -116,7 +116,7 @@
 7/shapes = [  ]
 7/z_index = 0
 8/name = "TIleMapChaov2.png 8"
-8/texture = ExtResource( 11 )
+8/texture = ExtResource( 12 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 64, 96, 32, 32 )
@@ -128,7 +128,7 @@
 
 [sub_resource type="TileSet" id=2]
 0/name = "CanosEnfeite.png 0"
-0/texture = ExtResource( 12 )
+0/texture = ExtResource( 13 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -138,7 +138,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "CanosEnfeite.png 1"
-1/texture = ExtResource( 12 )
+1/texture = ExtResource( 13 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 32, 32, 32 )
@@ -148,7 +148,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Canos.png 2"
-2/texture = ExtResource( 13 )
+2/texture = ExtResource( 14 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 32, 32 )
@@ -158,7 +158,7 @@
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Canos.png 3"
-3/texture = ExtResource( 13 )
+3/texture = ExtResource( 14 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 32, 0, 32, 32 )
@@ -168,7 +168,7 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Canos.png 4"
-4/texture = ExtResource( 13 )
+4/texture = ExtResource( 14 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 32, 32, 32, 32 )
@@ -178,7 +178,7 @@
 4/shapes = [  ]
 4/z_index = 0
 5/name = "Canos.png 5"
-5/texture = ExtResource( 13 )
+5/texture = ExtResource( 14 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 32, 32, 32 )
@@ -188,7 +188,7 @@
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Canos.png 6"
-6/texture = ExtResource( 13 )
+6/texture = ExtResource( 14 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 64, 32, 32 )
@@ -198,7 +198,7 @@
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Escada.png 7"
-7/texture = ExtResource( 14 )
+7/texture = ExtResource( 15 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 32, 32 )
@@ -208,7 +208,7 @@
 7/shapes = [  ]
 7/z_index = 0
 8/name = "Escada.png 8"
-8/texture = ExtResource( 14 )
+8/texture = ExtResource( 15 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 32, 0, 32, 32 )
@@ -218,7 +218,7 @@
 8/shapes = [  ]
 8/z_index = 0
 9/name = "Escada.png 9"
-9/texture = ExtResource( 14 )
+9/texture = ExtResource( 15 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 32, 32, 32 )
@@ -230,6 +230,9 @@
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 24.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 72 )
 
 [node name="Nivel3" type="Node2D"]
 
@@ -357,27 +360,66 @@ margin_bottom = 259.525
 [node name="TorreNode" parent="." instance=ExtResource( 3 )]
 position = Vector2( -200, 424 )
 
-[node name="Chave" parent="." instance=ExtResource( 4 )]
+[node name="Decoracoes" parent="." instance=ExtResource( 4 )]
+editor/display_folded = false
+
+[node name="Arbusto" parent="Decoracoes" index="0"]
+z_index = -1
+
+[node name="Arbusto2" parent="Decoracoes" index="1"]
+z_index = -1
+
+[node name="Arbusto3" parent="Decoracoes" index="2"]
+z_index = 1
+
+[node name="Arbusto4" parent="Decoracoes" index="3"]
+z_index = -1
+
+[node name="Arbusto5" parent="Decoracoes" index="4"]
+z_index = -1
+
+[node name="Arbusto6" parent="Decoracoes" index="5"]
+z_index = -1
+
+[node name="árvorep" parent="Decoracoes" index="6"]
+z_index = -1
+
+[node name="árvorep2" parent="Decoracoes" index="7"]
+z_index = -1
+
+[node name="árvorep3" parent="Decoracoes" index="8"]
+z_index = -1
+
+[node name="Decoração2" parent="Decoracoes" index="12"]
+z_index = -1
+
+[node name="Decoração3" parent="Decoracoes" index="13"]
+z_index = 1
+
+[node name="Decoração4" parent="Decoracoes" index="14"]
+z_index = 1
+
+[node name="Chave" parent="." instance=ExtResource( 5 )]
 position = Vector2( -176, 184 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
-[node name="TileMap2" parent="." instance=ExtResource( 6 )]
+[node name="TileMap2" parent="." instance=ExtResource( 7 )]
 
-[node name="ChaoQuebra" parent="." instance=ExtResource( 7 )]
+[node name="ChaoQuebra" parent="." instance=ExtResource( 8 )]
 position = Vector2( 560, 560 )
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
-[node name="ChaoQuebra2" parent="." instance=ExtResource( 7 )]
+[node name="ChaoQuebra2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 592, 560 )
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
-[node name="ChaoQuebra3" parent="." instance=ExtResource( 7 )]
+[node name="ChaoQuebra3" parent="." instance=ExtResource( 8 )]
 position = Vector2( 624, 560 )
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
-[node name="ChaoQuebra4" parent="." instance=ExtResource( 7 )]
+[node name="ChaoQuebra4" parent="." instance=ExtResource( 8 )]
 position = Vector2( 656, 560 )
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [node name="Cemimap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -397,23 +439,23 @@ tile_data = PoolIntArray( 1114157, 7, 0, 1179693, 8, 0, 1245229, 8, 0, 1310765, 
 [node name="Galhos" type="Node2D" parent="."]
 position = Vector2( -1208, 624 )
 
-[node name="Spike18" parent="Galhos" instance=ExtResource( 15 )]
+[node name="Spike18" parent="Galhos" instance=ExtResource( 16 )]
 position = Vector2( 528, 36.0001 )
 
-[node name="Galho" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( 384, 8 )
 
-[node name="Galho8" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho8" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( -64, 240 )
 
-[node name="Galho7" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho7" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( 120, 244 )
 
 [node name="Sprite" parent="Galhos/Galho7" index="0"]
 position = Vector2( 32, 0 )
 frame = 2
 
-[node name="Galho10" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho10" parent="Galhos" instance=ExtResource( 17 )]
 editor/display_folded = true
 position = Vector2( 328, 264 )
 
@@ -424,53 +466,53 @@ frame = 2
 [node name="Sprite2" parent="Galhos/Galho10" index="1"]
 frame = 1
 
-[node name="Galho2" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho2" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( 384, 32 )
 scale = Vector2( -1, 1 )
 
-[node name="Galho11" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho11" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( 608, 40 )
 scale = Vector2( -1, 1 )
 
-[node name="Galho9" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho9" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( -40, 208 )
 rotation = 0.261799
 scale = Vector2( -1, 1 )
 
-[node name="Galho4" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho4" parent="Galhos" instance=ExtResource( 17 )]
 editor/display_folded = true
 position = Vector2( 184, 88 )
 rotation = -6.02138
 scale = Vector2( -1, 1 )
 
-[node name="Galho5" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho5" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( 144, 88 )
 
-[node name="Galho12" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho12" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( 432, 264 )
 
-[node name="Galho3" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho3" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( -80, 32 )
 
-[node name="Galho6" parent="Galhos" instance=ExtResource( 16 )]
+[node name="Galho6" parent="Galhos" instance=ExtResource( 17 )]
 position = Vector2( -264, 96 )
 rotation = -0.261799
 
-[node name="Exit" parent="." instance=ExtResource( 17 )]
+[node name="Exit" parent="." instance=ExtResource( 18 )]
 position = Vector2( 2472, 480 )
 next_level = "res://Levels/Nivel4.tscn"
 
-[node name="Porta" parent="." instance=ExtResource( 18 )]
+[node name="Porta" parent="." instance=ExtResource( 19 )]
 position = Vector2( 328, 512 )
 
-[node name="Maurício" parent="." instance=ExtResource( 19 )]
+[node name="Maurício" parent="." instance=ExtResource( 20 )]
 editor/display_folded = true
 position = Vector2( 272, 500.799 )
 
 [node name="Sprite" parent="Maurício" index="0"]
 visible = false
 
-[node name="Virgilio" parent="." instance=ExtResource( 20 )]
+[node name="Virgilio" parent="." instance=ExtResource( 21 )]
 editor/display_folded = true
 visible = false
 position = Vector2( 808, 376 )
@@ -490,58 +532,58 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Spike" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -768, 928 )
 
-[node name="Spike16" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike16" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -704.5, 928.857 )
 
-[node name="Spike17" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike17" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -640, 927.143 )
 
-[node name="Spike9" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike9" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1152, 928.857 )
 
-[node name="Spike4" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike4" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -960, 928 )
 
-[node name="Spike12" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike12" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1344, 928.857 )
 
-[node name="Spike2" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike2" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -832, 927.143 )
 
-[node name="Spike10" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike10" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1216, 928 )
 
-[node name="Spike5" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike5" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1024, 927.143 )
 
-[node name="Spike7" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike7" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1408, 928 )
 
-[node name="Spike3" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike3" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -896, 928 )
 
-[node name="Spike11" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike11" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1280, 928.857 )
 
-[node name="Spike6" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike6" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1088, 928 )
 
-[node name="Spike8" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike8" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1472, 928.857 )
 
-[node name="Spike13" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike13" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1536, 928.857 )
 
-[node name="Spike14" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike14" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1608, 928.857 )
 
-[node name="Spike15" parent="Spikes" instance=ExtResource( 15 )]
+[node name="Spike15" parent="Spikes" instance=ExtResource( 16 )]
 position = Vector2( -1680, 927.143 )
 
-[node name="ArvoreFloresta4" parent="." instance=ExtResource( 21 )]
+[node name="ArvoreFloresta4" parent="." instance=ExtResource( 22 )]
 editor/display_folded = true
 position = Vector2( -1472, 896 )
 rotation = 3.14159
@@ -558,13 +600,11 @@ visible = false
 [node name="Sprite4" type="Sprite" parent="ArvoreFloresta4"]
 position = Vector2( 56, -7.99976 )
 
-[node name="CasaLenhador" parent="." instance=ExtResource( 22 )]
+[node name="CasaLenhador" parent="." instance=ExtResource( 23 )]
 position = Vector2( -1488, 488 )
 
-[node name="Pedro" parent="." instance=ExtResource( 23 )]
+[node name="Pedro" parent="." instance=ExtResource( 24 )]
 position = Vector2( 800, 1000 )
-
-[node name="Decoracoes" parent="." instance=ExtResource( 24 )]
 
 [node name="Player" parent="." instance=ExtResource( 25 )]
 position = Vector2( -96, 516.625 )
@@ -600,16 +640,16 @@ position = Vector2( -1174.52, 504 )
 [node name="LittleBridge4" parent="." instance=ExtResource( 28 )]
 position = Vector2( -1392, 504 )
 
-[node name="ArvoreFloresta" parent="." instance=ExtResource( 21 )]
+[node name="ArvoreFloresta" parent="." instance=ExtResource( 22 )]
 position = Vector2( -832, 608 )
 
-[node name="ArvoreFloresta5" parent="." instance=ExtResource( 21 )]
+[node name="ArvoreFloresta5" parent="." instance=ExtResource( 22 )]
 position = Vector2( -1736, 616 )
 
-[node name="ArvoreFloresta2" parent="." instance=ExtResource( 21 )]
+[node name="ArvoreFloresta2" parent="." instance=ExtResource( 22 )]
 position = Vector2( -1032, 608 )
 
-[node name="ArvoreFloresta3" parent="." instance=ExtResource( 21 )]
+[node name="ArvoreFloresta3" parent="." instance=ExtResource( 22 )]
 position = Vector2( -1256, 608 )
 
 [node name="Corda2" parent="." instance=ExtResource( 29 )]
@@ -661,16 +701,22 @@ scale = Vector2( 1.2, 0.6 )
 editor/display_folded = true
 position = Vector2( 1856, 608 )
 scale = Vector2( 0.8, 0.506 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -1472, 424 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 4 )
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="Porta" method="_on_Dialgue_hide"]
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra2" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra3" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra4" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra2" method="_on_Dialgue_hide"]
 [connection signal="body_entered" from="Chave" to="Chave" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Chave" to="Player" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Galhos/Spike18" to="Player" method="_on_Spike_body_entered"]
-[connection signal="body_entered" from="Maurício" to="CanvasLayer/Control" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Maurício" to="Porta" method="_on_Maurcio_body_entered"]
+[connection signal="body_entered" from="Maurício" to="CanvasLayer/Control" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Virgilio" to="CanvasLayer/Control" method="_on_Virgilio_body_entered"]
 [connection signal="body_entered" from="Virgilio/Subvirgilio" to="CanvasLayer/Control" method="_on_Subvirgilio_body_entered"]
 [connection signal="body_entered" from="Spikes/Spike" to="Player" method="_on_Spike_body_entered"]
@@ -702,6 +748,8 @@ scale = Vector2( 0.8, 0.506 )
 [connection signal="body_exited" from="Water2" to="Player" method="_on_Water_body_exited"]
 
 [editable path="CanvasLayer/Control"]
+
+[editable path="Decoracoes"]
 
 [editable path="Galhos/Galho7"]
 

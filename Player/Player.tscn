@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://PlayerSprite.png" type="Texture" id=2]
+[ext_resource path="res://Assets/SFX/Walking.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/SFX/waterSplash.wav" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.83014
@@ -153,6 +155,20 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 6.00592, 6.02069 )
 shape = SubResource( 8 )
+
+[node name="AudioAndar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.099
+
+[node name="AudioAgua" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -5.049
+
+[node name="Label" type="Label" parent="."]
+margin_left = -1.9234
+margin_top = -24.5056
+margin_right = 38.0766
+margin_bottom = -10.5056
 [connection signal="timeout" from="Timer_Swim" to="." method="_on_Timer_Swim_timeout"]
 [connection signal="timeout" from="Timer_Breath" to="." method="_on_Timer_Breath_timeout"]
 [connection signal="body_entered" from="Punch_Area" to="." method="_on_Punch_Area_body_entered"]

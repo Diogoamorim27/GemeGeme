@@ -673,11 +673,11 @@ position = Vector2( 103.537, 1057.94 )
 scale = Vector2( 2.5, 2.5 )
 
 [node name="Decoracoes" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Arbusto" type="Sprite" parent="Decoracoes"]
 position = Vector2( -226.868, 521.57 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -686,6 +686,7 @@ frame = 2
 [node name="Arbusto2" type="Sprite" parent="Decoracoes"]
 position = Vector2( -489.022, 521.57 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -694,6 +695,7 @@ frame = 2
 [node name="Arbusto3" type="Sprite" parent="Decoracoes"]
 position = Vector2( 199.642, 521.212 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -702,6 +704,7 @@ frame = 2
 [node name="Arbusto4" type="Sprite" parent="Decoracoes"]
 position = Vector2( 464, 522.389 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -710,6 +713,7 @@ frame = 2
 [node name="Arbusto5" type="Sprite" parent="Decoracoes"]
 position = Vector2( 949.491, 394.264 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -718,6 +722,7 @@ frame = 2
 [node name="Arbusto6" type="Sprite" parent="Decoracoes"]
 position = Vector2( 1188.15, 522.489 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -726,31 +731,37 @@ frame = 2
 [node name="árvorep" type="Sprite" parent="Decoracoes"]
 position = Vector2( 1070.65, 515.593 )
 scale = Vector2( 1.5, 1.8 )
+z_index = -1
 texture = ExtResource( 33 )
 
 [node name="árvorep2" type="Sprite" parent="Decoracoes"]
 position = Vector2( 1356.72, 515.951 )
 scale = Vector2( 1.5, 1.8 )
+z_index = -1
 texture = ExtResource( 33 )
 
 [node name="árvorep3" type="Sprite" parent="Decoracoes"]
 position = Vector2( 712.88, 515.593 )
 scale = Vector2( 1.5, 1.8 )
+z_index = -1
 texture = ExtResource( 33 )
 
 [node name="árvorep4" type="Sprite" parent="Decoracoes"]
 position = Vector2( 113.491, 515.951 )
 scale = Vector2( 1.5, 1.8 )
+z_index = -1
 texture = ExtResource( 33 )
 
 [node name="árvorep5" type="Sprite" parent="Decoracoes"]
 position = Vector2( -27.7529, 515.593 )
 scale = Vector2( 1.5, 1.8 )
+z_index = -1
 texture = ExtResource( 33 )
 
 [node name="Decoração1" type="Sprite" parent="Decoracoes"]
 position = Vector2( 35.6539, 528.14 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -758,6 +769,7 @@ hframes = 2
 [node name="Decoração2" type="Sprite" parent="Decoracoes"]
 position = Vector2( 1116.85, 527.064 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -765,6 +777,7 @@ hframes = 2
 [node name="Decoração3" type="Sprite" parent="Decoracoes"]
 position = Vector2( 1251.64, 524.913 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -773,6 +786,7 @@ frame = 5
 [node name="Decoração4" type="Sprite" parent="Decoracoes"]
 position = Vector2( 1295.72, 524.913 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 1
 texture = ExtResource( 10 )
 vframes = 3
 hframes = 2
@@ -803,11 +817,11 @@ texture = ExtResource( 34 )
 position = Vector2( -1351.96, 547.741 )
 scale = Vector2( 4.92017, 1.68112 )
 texture = ExtResource( 34 )
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="Porta" method="_on_Dialgue_hide"]
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra3" method="_on_Dialgue_hide"]
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra4" method="_on_Dialgue_hide"]
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra2" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra4" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra3" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="Porta" method="_on_Dialgue_hide"]
 [connection signal="body_entered" from="Chave" to="Chave" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Chave" to="Player" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Galhos/Spike18" to="Player" method="_on_Spike_body_entered"]

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 enum states {SENTINEL, CHASE, DEATH}
 
-const RUNNING_SPEED = 300
+const RUNNING_SPEED = 100
 const AIR_SPEED = 120
 const GRAVITY = 9.8 * 50
 const RAYCAST_CAST_TO = 10000
@@ -30,16 +30,15 @@ func _process(delta):
 
 	if movement.x > 0:
 		raycast_wall.cast_to.x = WALL_CAST_TO
+		sprite.flip_h = false
 	if movement.x < 0:
 		raycast_wall.cast_to.x = -WALL_CAST_TO
+		sprite.flip_h = true
 
 	match state:
 		states.SENTINEL:
 			_apply_movement(sentinel_direction, RUNNING_SPEED)
-			if raycast.get_collider():
-				if raycast.get_collider().name == "Player":
-					state = states.CHASE
-					timer.stop()
+
 					
 			if raycast_wall.is_colliding():
 				sentinel_direction *= -1
@@ -47,19 +46,7 @@ func _process(delta):
 				print (raycast_wall.cast_to.x)
 				timer.start()
 				
-						
-		states.CHASE:
-			if !raycast.get_collider():
-				state = states.SENTINEL
-				timer.start()
-			elif raycast.get_collider().name != "Player":
-				state = states.SENTINEL
-				timer.start()
-			pass
-		states.DEATH:
-			pass
-			
-			
+
 	_handle_animation()
 	if !is_on_floor():
 		_apply_gravity(delta)

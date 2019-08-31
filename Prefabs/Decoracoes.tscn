@@ -72,16 +72,19 @@ texture = ExtResource( 2 )
 [node name="árvorep4" type="Sprite" parent="."]
 position = Vector2( 113.491, 515.951 )
 scale = Vector2( 1.5, 1.8 )
+z_index = -1
 texture = ExtResource( 2 )
 
 [node name="árvorep5" type="Sprite" parent="."]
 position = Vector2( -27.7529, 515.593 )
 scale = Vector2( 1.5, 1.8 )
+z_index = -1
 texture = ExtResource( 2 )
 
 [node name="Decoração1" type="Sprite" parent="."]
 position = Vector2( 35.6539, 528.14 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -1
 texture = ExtResource( 1 )
 vframes = 3
 hframes = 2

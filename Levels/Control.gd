@@ -21,10 +21,19 @@ func _process(delta):
 				dialog_index += 1
 			else:
 				_finish_dialog()
+		
 		if current_dialog[dialog_index].char != "MORTE":
+			if $Label2:
+				$Label2.text = ""
+			$Dialgue.visible = true
 			$Label.text = current_dialog[dialog_index].fala
 		else: 
 			$Label.text = ""
+			$Dialgue.visible = false
+			if $Label2:
+				$Label2.text = current_dialog[dialog_index].fala
+				$Label2.visible = true
+				print($Label2.text)
 			
 		if current_dialog[dialog_index].char == "MARCOS":
 			$PlayerBust.visible = true

@@ -679,6 +679,43 @@ position = Vector2( 656, 1176 )
 scale = Vector2( 0.26349, 0.962891 )
 
 [node name="Decoracoes" parent="." instance=ExtResource( 32 )]
+editor/display_folded = false
+
+[node name="Arbusto" parent="Decoracoes" index="0"]
+z_index = -1
+
+[node name="Arbusto2" parent="Decoracoes" index="1"]
+z_index = -1
+
+[node name="Arbusto3" parent="Decoracoes" index="2"]
+z_index = 1
+
+[node name="Arbusto4" parent="Decoracoes" index="3"]
+z_index = -1
+
+[node name="Arbusto5" parent="Decoracoes" index="4"]
+z_index = -1
+
+[node name="Arbusto6" parent="Decoracoes" index="5"]
+z_index = -1
+
+[node name="árvorep" parent="Decoracoes" index="6"]
+z_index = -1
+
+[node name="árvorep2" parent="Decoracoes" index="7"]
+z_index = -1
+
+[node name="árvorep3" parent="Decoracoes" index="8"]
+z_index = -1
+
+[node name="Decoração2" parent="Decoracoes" index="12"]
+z_index = -1
+
+[node name="Decoração3" parent="Decoracoes" index="13"]
+z_index = 1
+
+[node name="Decoração4" parent="Decoracoes" index="14"]
+z_index = 1
 
 [node name="PonteQuebrada" type="Sprite" parent="."]
 position = Vector2( -701.225, 533.011 )
@@ -699,13 +736,13 @@ texture = ExtResource( 33 )
 position = Vector2( -1351.96, 547.741 )
 scale = Vector2( 4.92017, 1.68112 )
 texture = ExtResource( 33 )
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra2" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra3" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra4" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra2" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="Porta" method="_on_Dialgue_hide"]
-[connection signal="body_entered" from="Chave" to="Chave" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Chave" to="Player" method="_on_Chave_body_entered"]
+[connection signal="body_entered" from="Chave" to="Chave" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Galhos/Spike18" to="Player" method="_on_Spike_body_entered"]
 [connection signal="body_entered" from="Maurício" to="Porta" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Maurício" to="CanvasLayer/Control" method="_on_Maurcio_body_entered"]
@@ -767,3 +804,5 @@ texture = ExtResource( 33 )
 [editable path="personagem_lenhador"]
 
 [editable path="Water2"]
+
+[editable path="Decoracoes"]
