@@ -87,6 +87,13 @@ func _fetch_dialog(character : String):
 				return null
 			pass
 		"fase3":
+			if character == "leo":
+				player.has_boots = true
+				return DialogDict.data.fase3[0]
+			elif character == "virgilio":
+				return DialogDict.data.fase3[1]
+			elif character == "pedro":
+				return DialogDict.data.fase3[2]
 			pass
 		"fase4":
 			pass
