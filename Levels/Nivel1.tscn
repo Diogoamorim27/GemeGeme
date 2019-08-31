@@ -1,24 +1,26 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=50 format=2]
 
-[ext_resource path="res://Prefabs/Control.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Prefabs/Torre.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/TIleMapChao.png" type="Texture" id=3]
-[ext_resource path="res://Assets/PropSprites/corda.png" type="Texture" id=4]
-[ext_resource path="res://Assets/TIleMapChaov2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Chao escalamento.png" type="Texture" id=6]
-[ext_resource path="res://Assets/PropSprites/Cemitério.png" type="Texture" id=7]
-[ext_resource path="res://Assets/PropSprites/Decoração1.png" type="Texture" id=8]
-[ext_resource path="res://Assets/PropSprites/Árvore Grande(1).png" type="Texture" id=9]
-[ext_resource path="res://Exit.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Porta.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Maurício.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/Virgilio.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Prefabs/Corda.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Prefabs/Rope.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Prefabs/Platform.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Prefabs/PonteGrande.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Assets/Background/BackgroudNew1.png" type="Texture" id=1]
+[ext_resource path="res://Prefabs/Control.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Torre.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/TIleMapChao.png" type="Texture" id=4]
+[ext_resource path="res://Assets/PropSprites/corda.png" type="Texture" id=5]
+[ext_resource path="res://Assets/TIleMapChaov2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Chao escalamento.png" type="Texture" id=7]
+[ext_resource path="res://Assets/PropSprites/Cemitério.png" type="Texture" id=8]
+[ext_resource path="res://Assets/PropSprites/Decoração1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/PropSprites/Árvore Grande(1).png" type="Texture" id=10]
+[ext_resource path="res://Assets/PropSprites/Fundo Esgoto.png" type="Texture" id=11]
+[ext_resource path="res://Exit.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Porta.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Maurício.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Virgilio.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Corda.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Rope.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Platform.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/PonteGrande.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=21]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -100,7 +102,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=23]
 0/name = "TIleMapChao.png 0"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -116,7 +118,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 1/name = "TIleMapChao.png 1"
-1/texture = ExtResource( 3 )
+1/texture = ExtResource( 4 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 32, 0, 32, 32 )
@@ -132,7 +134,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 2/name = "TIleMapChao.png 2"
-2/texture = ExtResource( 3 )
+2/texture = ExtResource( 4 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 64, 0, 32, 32 )
@@ -148,7 +150,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 2/z_index = 0
 3/name = "TIleMapChao.png 3"
-3/texture = ExtResource( 3 )
+3/texture = ExtResource( 4 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 32, 32, 32 )
@@ -164,7 +166,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 3/z_index = 0
 4/name = "TIleMapChao.png 4"
-4/texture = ExtResource( 3 )
+4/texture = ExtResource( 4 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 32, 32, 32, 32 )
@@ -180,7 +182,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 4/z_index = 0
 5/name = "TIleMapChao.png 5"
-5/texture = ExtResource( 3 )
+5/texture = ExtResource( 4 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 64, 32, 32, 32 )
@@ -196,7 +198,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 5/z_index = 0
 6/name = "TIleMapChao.png 6"
-6/texture = ExtResource( 3 )
+6/texture = ExtResource( 4 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 64, 32, 32 )
@@ -212,7 +214,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 6/z_index = 0
 7/name = "TIleMapChao.png 7"
-7/texture = ExtResource( 3 )
+7/texture = ExtResource( 4 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 32, 64, 32, 32 )
@@ -228,7 +230,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 7/z_index = 0
 8/name = "TIleMapChao.png 8"
-8/texture = ExtResource( 3 )
+8/texture = ExtResource( 4 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 64, 64, 32, 32 )
@@ -244,7 +246,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 8/z_index = 0
 9/name = "corda.png 9"
-9/texture = ExtResource( 4 )
+9/texture = ExtResource( 5 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 32, 32 )
@@ -254,7 +256,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 9/shapes = [  ]
 9/z_index = 0
 10/name = "corda.png 10"
-10/texture = ExtResource( 4 )
+10/texture = ExtResource( 5 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 32, 0, 32, 32 )
@@ -264,7 +266,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 10/shapes = [  ]
 10/z_index = 0
 11/name = "corda.png 11"
-11/texture = ExtResource( 4 )
+11/texture = ExtResource( 5 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 32, 32, 32 )
@@ -274,7 +276,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 11/shapes = [  ]
 11/z_index = 0
 12/name = "TIleMapChaov2.png 12"
-12/texture = ExtResource( 5 )
+12/texture = ExtResource( 6 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 32, 32 )
@@ -290,7 +292,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 12/z_index = 0
 13/name = "TIleMapChaov2.png 13"
-13/texture = ExtResource( 5 )
+13/texture = ExtResource( 6 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 32, 0, 32, 32 )
@@ -306,7 +308,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 13/z_index = 0
 14/name = "TIleMapChaov2.png 14"
-14/texture = ExtResource( 5 )
+14/texture = ExtResource( 6 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 64, 0, 32, 32 )
@@ -322,7 +324,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 14/z_index = 0
 15/name = "TIleMapChaov2.png 15"
-15/texture = ExtResource( 5 )
+15/texture = ExtResource( 6 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 32, 32, 32 )
@@ -338,7 +340,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 15/z_index = 0
 16/name = "TIleMapChaov2.png 16"
-16/texture = ExtResource( 5 )
+16/texture = ExtResource( 6 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 32, 32, 32, 32 )
@@ -354,7 +356,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 16/z_index = 0
 17/name = "TIleMapChaov2.png 17"
-17/texture = ExtResource( 5 )
+17/texture = ExtResource( 6 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 64, 32, 32, 32 )
@@ -370,7 +372,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 17/z_index = 0
 18/name = "TIleMapChaov2.png 18"
-18/texture = ExtResource( 5 )
+18/texture = ExtResource( 6 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 64, 32, 32 )
@@ -386,7 +388,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 18/z_index = 0
 19/name = "TIleMapChaov2.png 19"
-19/texture = ExtResource( 5 )
+19/texture = ExtResource( 6 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 32, 64, 32, 32 )
@@ -402,7 +404,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 19/z_index = 0
 20/name = "TIleMapChaov2.png 20"
-20/texture = ExtResource( 5 )
+20/texture = ExtResource( 6 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 64, 64, 32, 32 )
@@ -418,7 +420,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 20/z_index = 0
 21/name = "TIleMapChaov2.png 21"
-21/texture = ExtResource( 5 )
+21/texture = ExtResource( 6 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 96, 32, 32 )
@@ -434,7 +436,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 21/z_index = 0
 22/name = "TIleMapChaov2.png 22"
-22/texture = ExtResource( 5 )
+22/texture = ExtResource( 6 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 32, 96, 32, 32 )
@@ -450,7 +452,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 22/z_index = 0
 23/name = "TIleMapChaov2.png 23"
-23/texture = ExtResource( 5 )
+23/texture = ExtResource( 6 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 64, 96, 32, 32 )
@@ -466,7 +468,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 23/z_index = 0
 24/name = "Chao escalamento.png 24"
-24/texture = ExtResource( 6 )
+24/texture = ExtResource( 7 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 0, 0, 32, 32 )
@@ -482,7 +484,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 24/z_index = 0
 25/name = "Cemitério.png 25"
-25/texture = ExtResource( 7 )
+25/texture = ExtResource( 8 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 0, 0, 32, 32 )
@@ -492,7 +494,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 25/shapes = [  ]
 25/z_index = 0
 26/name = "Cemitério.png 26"
-26/texture = ExtResource( 7 )
+26/texture = ExtResource( 8 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 32, 0, 32, 32 )
@@ -502,7 +504,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 26/shapes = [  ]
 26/z_index = 0
 27/name = "Decoração1.png 27"
-27/texture = ExtResource( 8 )
+27/texture = ExtResource( 9 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 0, 0, 32, 32 )
@@ -512,7 +514,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 27/shapes = [  ]
 27/z_index = 0
 28/name = "Decoração1.png 28"
-28/texture = ExtResource( 8 )
+28/texture = ExtResource( 9 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 32, 0, 32, 32 )
@@ -522,7 +524,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 28/shapes = [  ]
 28/z_index = 0
 29/name = "Decoração1.png 29"
-29/texture = ExtResource( 8 )
+29/texture = ExtResource( 9 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 32, 32, 32 )
@@ -532,7 +534,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 29/shapes = [  ]
 29/z_index = 0
 30/name = "Decoração1.png 30"
-30/texture = ExtResource( 8 )
+30/texture = ExtResource( 9 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 32, 32, 32, 32 )
@@ -542,7 +544,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 30/shapes = [  ]
 30/z_index = 0
 31/name = "Decoração1.png 31"
-31/texture = ExtResource( 8 )
+31/texture = ExtResource( 9 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 0, 64, 32, 32 )
@@ -552,7 +554,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 31/shapes = [  ]
 31/z_index = 0
 32/name = "Decoração1.png 32"
-32/texture = ExtResource( 8 )
+32/texture = ExtResource( 9 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 32, 64, 32, 32 )
@@ -562,7 +564,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 32/shapes = [  ]
 32/z_index = 0
 33/name = "Árvore Grande(1).png 33"
-33/texture = ExtResource( 9 )
+33/texture = ExtResource( 10 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 0, 32, 32, 32 )
@@ -578,7 +580,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 33/z_index = 0
 34/name = "Árvore Grande(1).png 34"
-34/texture = ExtResource( 9 )
+34/texture = ExtResource( 10 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 32, 32, 32, 32 )
@@ -594,7 +596,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 34/z_index = 0
 35/name = "Árvore Grande(1).png 35"
-35/texture = ExtResource( 9 )
+35/texture = ExtResource( 10 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 64, 32, 32, 32 )
@@ -610,7 +612,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 35/z_index = 0
 36/name = "Árvore Grande(1).png 36"
-36/texture = ExtResource( 9 )
+36/texture = ExtResource( 10 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 0, 64, 32, 32 )
@@ -625,10 +627,150 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 36/z_index = 0
+37/name = "Fundo Esgoto.png 37"
+37/texture = ExtResource( 11 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 32, 0, 32, 32 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shapes = [  ]
+37/z_index = 0
+38/name = "Fundo Esgoto.png 38"
+38/texture = ExtResource( 11 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 0, 0, 32, 32 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 0, 0 )
+38/navigation_offset = Vector2( 0, 0 )
+38/shapes = [  ]
+38/z_index = 0
+39/name = "Fundo Esgoto.png 39"
+39/texture = ExtResource( 11 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 96, 0, 32, 32 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 0, 0 )
+39/navigation_offset = Vector2( 0, 0 )
+39/shapes = [  ]
+39/z_index = 0
+40/name = "Fundo Esgoto.png 40"
+40/texture = ExtResource( 11 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 32, 32, 32, 32 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 0, 0 )
+40/navigation_offset = Vector2( 0, 0 )
+40/shapes = [  ]
+40/z_index = 0
+41/name = "Fundo Esgoto.png 41"
+41/texture = ExtResource( 11 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 0, 32, 32, 32 )
+41/tile_mode = 0
+41/occluder_offset = Vector2( 0, 0 )
+41/navigation_offset = Vector2( 0, 0 )
+41/shapes = [  ]
+41/z_index = 0
+42/name = "Fundo Esgoto.png 42"
+42/texture = ExtResource( 11 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 32, 96, 32, 32 )
+42/tile_mode = 0
+42/occluder_offset = Vector2( 0, 0 )
+42/navigation_offset = Vector2( 0, 0 )
+42/shapes = [  ]
+42/z_index = 0
+43/name = "Fundo Esgoto.png 43"
+43/texture = ExtResource( 11 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 96, 64, 32, 32 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 0, 0 )
+43/navigation_offset = Vector2( 0, 0 )
+43/shapes = [  ]
+43/z_index = 0
+44/name = "Fundo Esgoto.png 44"
+44/texture = ExtResource( 11 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 64, 32, 32, 32 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shapes = [  ]
+44/z_index = 0
+45/name = "Fundo Esgoto.png 45"
+45/texture = ExtResource( 11 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 96, 32, 32, 32 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shapes = [  ]
+45/z_index = 0
+46/name = "Fundo Esgoto.png 46"
+46/texture = ExtResource( 11 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 64, 0, 32, 32 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 0, 0 )
+46/navigation_offset = Vector2( 0, 0 )
+46/shapes = [  ]
+46/z_index = 0
+47/name = "Fundo Esgoto.png 47"
+47/texture = ExtResource( 11 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 32, 64, 32, 32 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 0, 0 )
+47/navigation_offset = Vector2( 0, 0 )
+47/shapes = [  ]
+47/z_index = 0
+48/name = "Fundo Esgoto.png 48"
+48/texture = ExtResource( 11 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 64, 64, 32, 32 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 0, 0 )
+48/navigation_offset = Vector2( 0, 0 )
+48/shapes = [  ]
+48/z_index = 0
+49/name = "Fundo Esgoto.png 49"
+49/texture = ExtResource( 11 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 0, 64, 32, 32 )
+49/tile_mode = 0
+49/occluder_offset = Vector2( 0, 0 )
+49/navigation_offset = Vector2( 0, 0 )
+49/shapes = [  ]
+49/z_index = 0
+50/name = "Fundo Esgoto.png 50"
+50/texture = ExtResource( 11 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 0, 96, 32, 32 )
+50/tile_mode = 0
+50/occluder_offset = Vector2( 0, 0 )
+50/navigation_offset = Vector2( 0, 0 )
+50/shapes = [  ]
+50/z_index = 0
 
 [sub_resource type="TileSet" id=24]
 0/name = "Cemitério.png 0"
-0/texture = ExtResource( 7 )
+0/texture = ExtResource( 8 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -638,7 +780,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Cemitério.png 1"
-1/texture = ExtResource( 7 )
+1/texture = ExtResource( 8 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 32, 0, 32, 32 )
@@ -648,7 +790,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Decoração1.png 2"
-2/texture = ExtResource( 8 )
+2/texture = ExtResource( 9 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 32, 32 )
@@ -658,7 +800,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Decoração1.png 3"
-3/texture = ExtResource( 8 )
+3/texture = ExtResource( 9 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 32, 0, 32, 32 )
@@ -668,7 +810,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Decoração1.png 4"
-4/texture = ExtResource( 8 )
+4/texture = ExtResource( 9 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 32, 32, 32, 32 )
@@ -678,7 +820,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "Decoração1.png 5"
-5/texture = ExtResource( 8 )
+5/texture = ExtResource( 9 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 32, 32, 32 )
@@ -688,7 +830,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Decoração1.png 6"
-6/texture = ExtResource( 8 )
+6/texture = ExtResource( 9 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 32, 64, 32, 32 )
@@ -698,7 +840,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Decoração1.png 7"
-7/texture = ExtResource( 8 )
+7/texture = ExtResource( 9 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 64, 32, 32 )
@@ -708,7 +850,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "TIleMapChaov2.png 8"
-8/texture = ExtResource( 5 )
+8/texture = ExtResource( 6 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 64, 96, 32, 32 )
@@ -720,14 +862,102 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Nivel1" type="Node2D"]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 4.76837e-007, 8 )
+scale = Vector2( 0.825, 0.825 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 1
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 512, 0 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 1 )
+flip_h = true
+vframes = 2
+hframes = 2
+frame = 1
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 1024, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 1 )
+flip_h = true
+vframes = 2
+hframes = 2
+frame = 1
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( -512, 24 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 1
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( -17.579, -64.5263 )
+scale = Vector2( 0.804934, 0.798355 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 496, -64 )
+scale = Vector2( 0.804934, 0.798355 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 1008, -64 )
+scale = Vector2( 0.804934, 0.798355 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 1520, -64 )
+scale = Vector2( 0.804934, 0.798355 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( -528, -64 )
+scale = Vector2( 0.804934, 0.798355 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Control" parent="CanvasLayer" groups=[
 "control",
-] instance=ExtResource( 1 )]
+] instance=ExtResource( 2 )]
 fase = "fase1"
 
-[node name="TorreNode" parent="." instance=ExtResource( 2 )]
+[node name="TorreNode" parent="." instance=ExtResource( 3 )]
 position = Vector2( -200, 424 )
 
 [node name="TileMap2" type="TileMap" parent="."]
@@ -742,7 +972,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="TileMap2"]
 position = Vector2( -400, 328 )
 scale = Vector2( 3.5, 3.5 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 vframes = 3
 hframes = 3
 frame = 3
@@ -756,23 +986,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Exit" parent="." instance=ExtResource( 10 )]
+[node name="Exit" parent="." instance=ExtResource( 12 )]
 position = Vector2( 2472, 480 )
 
-[node name="Porta" parent="." instance=ExtResource( 11 )]
+[node name="Porta" parent="." instance=ExtResource( 13 )]
 position = Vector2( 328, 512 )
 
-[node name="Maurício" parent="." instance=ExtResource( 12 )]
+[node name="Maurício" parent="." instance=ExtResource( 14 )]
 position = Vector2( 276, 504 )
 
-[node name="Virgilio" parent="." instance=ExtResource( 13 )]
+[node name="Virgilio" parent="." instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 808, 376 )
 
 [node name="CollisionShape2D" parent="Virgilio" index="1"]
 position = Vector2( -16.1735, 140.799 )
 
-[node name="Player" parent="." instance=ExtResource( 14 )]
+[node name="Player" parent="." instance=ExtResource( 16 )]
 editor/display_folded = true
 position = Vector2( -80, 516.799 )
 
@@ -780,10 +1010,10 @@ position = Vector2( -80, 516.799 )
 position = Vector2( 3.92917, 0 )
 current = true
 
-[node name="Corda" parent="." instance=ExtResource( 15 )]
+[node name="Corda" parent="." instance=ExtResource( 17 )]
 position = Vector2( 816, 400 )
 
-[node name="Rope" parent="." instance=ExtResource( 16 )]
+[node name="Rope" parent="." instance=ExtResource( 18 )]
 editor/display_folded = true
 position = Vector2( 816, 424 )
 
@@ -791,32 +1021,34 @@ position = Vector2( 816, 424 )
 position = Vector2( 6.79419, 34.9118 )
 
 [node name="Platforms" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -64, -40 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Platform" parent="Platforms" instance=ExtResource( 17 )]
+[node name="Platform" parent="Platforms" instance=ExtResource( 19 )]
 position = Vector2( -152, 448 )
 
-[node name="Platform4" parent="Platforms" instance=ExtResource( 17 )]
+[node name="Platform4" parent="Platforms" instance=ExtResource( 19 )]
 position = Vector2( -56, 480 )
 
-[node name="Platform2" parent="Platforms" instance=ExtResource( 17 )]
+[node name="Platform2" parent="Platforms" instance=ExtResource( 19 )]
 position = Vector2( -248, 416 )
 
-[node name="Platform3" parent="Platforms" instance=ExtResource( 17 )]
+[node name="Platform3" parent="Platforms" instance=ExtResource( 19 )]
 position = Vector2( -120, 352 )
 
-[node name="PonteGrande" parent="." instance=ExtResource( 18 )]
+[node name="PonteGrande" parent="." instance=ExtResource( 20 )]
 position = Vector2( 1856, 504 )
 scale = Vector2( 3, 3 )
 
-[node name="Water" parent="." instance=ExtResource( 19 )]
+[node name="Water" parent="." instance=ExtResource( 21 )]
 position = Vector2( 256, 1152 )
 scale = Vector2( 1.2, 0.759 )
 
-[node name="Water2" parent="." instance=ExtResource( 19 )]
+[node name="Water2" parent="." instance=ExtResource( 21 )]
+editor/display_folded = true
 position = Vector2( 1856, 608 )
 scale = Vector2( 0.8, 0.506 )
 [connection signal="gui_input" from="CanvasLayer/Control/Dialgue" to="CanvasLayer/Control" method="_on_Dialgue_gui_input"]
