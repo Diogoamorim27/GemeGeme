@@ -18,5 +18,6 @@ func _on_Dialgue_hide():
 	if control:
 		if control.current_dialog == DialogDict.data.fase3[1]:
 			$AnimationPlayer.play("Break")
-			$CollisionShape2D.queue_free()
+			if $CollisionShape2D:
+				$CollisionShape2D.queue_free()
 	pass # Replace with function body.

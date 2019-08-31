@@ -21,12 +21,15 @@ func _process(delta):
 				dialog_index += 1
 			else:
 				_finish_dialog()
-	
-		$Label.text = current_dialog[dialog_index].fala
-		
+		if current_dialog[dialog_index].char != "MORTE":
+			$Label.text = current_dialog[dialog_index].fala
+		else: 
+			$Label.text = ""
+			
 		if current_dialog[dialog_index].char == "MARCOS":
 			$PlayerBust.visible = true
 			$SpeakerBust.visible = false
+		
 		else:
 			match current_dialog[dialog_index].char:
 				"VIRGILIO":
@@ -44,9 +47,15 @@ func _process(delta):
 				"LEO":
 					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_lenhador.png")
 					pass
+				"MORTE":
+					$SpeakerBust.texture = load("res://Assets/CharacterArt/Morte.png")
+			
 			$PlayerBust.visible = false
 			$SpeakerBust.visible = true
 			
+		if fase == "fase6":
+			$PlayerBust.visible = false
+			$SpeakerBust.visible = false
 
 func _on_Maurcio_body_entered(body):
 	if body.name == "Player":
@@ -110,7 +119,10 @@ func _fetch_dialog(character : String):
 		"fase5":
 			if character == "pedro":
 				return DialogDict.data.fase5[0]
-			pass
+				
+		"fase6":
+			if character == "morte":
+				return DialogDict.data.fase6[0]
 			
 			
 func _finish_dialog():
@@ -161,4 +173,11 @@ func _on_SubLeo_body_entered(body):
 	if body.name == "Player":
 		visible = true
 		_start_dialog("subleo")
+	pass # Replace with function body.
+
+
+func _on_Morte_body_entered(body):
+	if body.name == "Player":
+		visible = true
+		_start_dialog("morte")
 	pass # Replace with function body.

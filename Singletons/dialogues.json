@@ -353,67 +353,47 @@
     "fase6" : [
         [
             {
-                "char": "Morte",
-                "fala": "O que deseja Marcos?"
-            }
-        ], 
-        [      
+                "char": "MORTE",
+                "fala": "Já faz muito tempo, Marcos."
+            },
+               
             {
-                "char": "Marcos",
-                "fala": "Eu não sei, tudo parece sem sentido..."
-            }
-        ],
-        [
+                "char": "MARCOS",
+                "fala": "É. Eu não sei se estava te procurando, mas acho que fez sentido eu chegar aqui."
+            },
+        
             {
-                "char": "Morte",
+                "char": "MORTE",
                 "fala": "Sentido é a última coisa que a vida tem"
-            }
-        ], 
-        [      
+            }, 
+          
             {
-                "char": "Marcos",
-                "fala": "Eu vivi todos esses anos vendo todos a minha volta desaparecer e eu continuar aqui..."
-            }
-        ],
-        [      
+                "char": "MARCOS",
+                "fala": "Eu vi tudo ir embora. Agora só me resta o nada."
+            },
+  
             {
-                "char": "Marcos",
-                "fala": "E agora todos se foram e o que resta?"
-            }
-        ],
-        [
+                "char": "MORTE",
+                "fala": "E pra onde você estava indo?"
+            },  
+  
             {
-                "char": "Morte",
-                "fala": "Não resta nada..."
-            }
-        ],  
-        [      
+                "char": "MARCOS",
+                "fala": "..."
+            },
+
             {
-                "char": "Marcos",
-                "fala": "Então depois de tanto tempo é assim que termina?"
-            }
-        ],
-        [
+                "char": "MORTE",
+                "fala": "E você chegou lá?"
+            }, 
+  
             {
-                "char": "Morte",
-                "fala": "Como eu falei sentido é a última coisa que a vida tem"
-            }
-        ], 
-        [      
+                "char": "MARCOS",
+                "fala": "Acho que sim."
+            }, 
+  
             {
-                "char": "Marcos",
-                "fala": "Realmente, acho que agora entendo, o ciclo é necessário para que tenhamos algum sentido, algum motivo..."
-            }
-        ], 
-        [      
-            {
-                "char": "Marcos",
-                "fala": "Nunca pensei em falar isso, mas acho que minha hora está chegando"
-            }
-        ],
-        [
-            {
-                "char": "Morte",
+                "char": "MORTE",
                 "fala": "Quando estiver pronto venha..."
             }
         ] 

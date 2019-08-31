@@ -803,13 +803,13 @@ texture = ExtResource( 34 )
 position = Vector2( -1351.96, 547.741 )
 scale = Vector2( 4.92017, 1.68112 )
 texture = ExtResource( 34 )
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra" method="_on_Dialgue_hide"]
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra2" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="Porta" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra3" method="_on_Dialgue_hide"]
 [connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra4" method="_on_Dialgue_hide"]
-[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="Porta" method="_on_Dialgue_hide"]
-[connection signal="body_entered" from="Chave" to="Player" method="_on_Chave_body_entered"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra" method="_on_Dialgue_hide"]
+[connection signal="hide" from="CanvasLayer/Control/Dialgue" to="ChaoQuebra2" method="_on_Dialgue_hide"]
 [connection signal="body_entered" from="Chave" to="Chave" method="_on_Chave_body_entered"]
+[connection signal="body_entered" from="Chave" to="Player" method="_on_Chave_body_entered"]
 [connection signal="body_entered" from="Galhos/Spike18" to="Player" method="_on_Spike_body_entered"]
 [connection signal="body_entered" from="Maurício" to="CanvasLayer/Control" method="_on_Maurcio_body_entered"]
 [connection signal="body_entered" from="Maurício" to="Porta" method="_on_Maurcio_body_entered"]
