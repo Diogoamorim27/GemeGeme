@@ -3,9 +3,11 @@ extends Control
 export (String, "fase1", "fase2", "fase3", "fase4", "fase5") var fase 
 
 var current_dialog 
-var dialog_active
+var dialog_active = false
 var dialog_index: int = 0
 var past_dialogs = []
+
+onready var player = get_tree().get_nodes_in_group("player")[0]
 
 func _ready():
 	visible = false
@@ -19,8 +21,22 @@ func _process(delta):
 			$PlayerBust.visible = true
 			$SpeakerBust.visible = false
 		else:
+			match current_dialog[dialog_index].char:
+				"VIRGILIO":
+					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_corda.png")
+					pass
+				"PEDRO":
+					pass
+				"MAURICIO":
+					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_porta.png")
+					pass
+				"MULHER":
+					pass
+				"LEO":
+					pass
 			$PlayerBust.visible = false
 			$SpeakerBust.visible = true
+			
 
 func _on_Maurcio_body_entered(body):
 	if body.name == "Player":
@@ -33,6 +49,7 @@ func _start_dialog(character : String):
 	if !past_dialogs.has(current_dialog):
 		dialog_active = true
 		visible = true
+		player.state = 6
 	else:
 		_finish_dialog()
 		pass
@@ -68,6 +85,7 @@ func _finish_dialog():
 	visible = false
 	dialog_active = false
 	dialog_index = 0
+	player.state = 3
 	
 
 

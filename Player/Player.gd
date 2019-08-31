@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum states {RUN, JUMP, DEATH, IDLE, SWIM, CLIMB}
+enum states {RUN, JUMP, DEATH, IDLE, SWIM, CLIMB, INTERACTING}
 
 const RUNNING_SPEED = 200
 const AIR_SPEED = 120
@@ -110,6 +110,13 @@ func _process(delta):
 			movement = move_and_slide(movement)
 			
 			pass
+			
+		states.INTERACTING:
+			$AnimationPlayer.play("Idle")
+			_apply_movement(0, 0)
+			_apply_gravity(delta)
+			
+			movement = move_and_slide_with_snap(movement, Vector2(0,0.2),Vector2.UP)
 			
 	#print(state)
 
