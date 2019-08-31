@@ -33,6 +33,7 @@ func _process(delta):
 					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_corda.png")
 					pass
 				"PEDRO":
+					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_lutador.png")
 					pass
 				"MAURICIO":
 					$SpeakerBust.texture = load("res://Assets/CharacterArt/personagem_porta.png")
@@ -128,4 +129,11 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		visible = true
 		_start_dialog("leo")
+	pass # Replace with function body.
+
+
+func _on_Pedro_body_entered(body):
+	if body.name == "Player":
+		visible = true
+		_start_dialog("pedro")
 	pass # Replace with function body.

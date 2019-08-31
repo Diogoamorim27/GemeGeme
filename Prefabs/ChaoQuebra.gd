@@ -1,11 +1,12 @@
-extends Area2D
+extends StaticBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var next_level : String
+var control : Control 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	control = get_tree().get_nodes_in_group("control")[0]
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,7 +14,9 @@ func _ready():
 #	pass
 
 
-func _on_Exit_body_entered(body):
-	if body.name == "Player":
-		get_tree().change_scene(next_level)
+func _on_Dialgue_hide():
+	if control:
+		if control.current_dialog == DialogDict.data.fase3[1]:
+			$AnimationPlayer.play("Break")
+			$CollisionShape2D.queue_free()
 	pass # Replace with function body.

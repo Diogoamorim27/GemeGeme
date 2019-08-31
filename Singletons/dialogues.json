@@ -70,7 +70,7 @@
             {
                 "char": "MARCOS",
                 "fala": "..."
-            },
+            }
         ],
         [
             {
@@ -213,7 +213,12 @@
                 
             {
                 "char": "PEDRO",
-                "fala": "Bem, toma cuidado com as ratazanas, tem umas enormes aqui embaixo. Isso não deve ser um problema agora, já que eu matei todas no caminho, mas todo dia aparecem novas."
+                "fala": "Bem, toma cuidado com as ratazanas, tem umas enormes aqui embaixo." 
+            },
+
+            {
+                "char": "PEDRO",
+                "fala": "Isso não deve ser um problema agora, já que eu matei todas no caminho, mas todo dia aparecem novas."
             }
         ]
     ],
