@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/PropSprites/Torrev1.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Close"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[node name="TorreNode" type="Node2D"]
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 60, 60 )
+scale = Vector2( 3.75, 3.75 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 3
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 60, -172 )
+scale = Vector2( 3.75, 3.75 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 5
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 60, -56 )
+scale = Vector2( 3.75, 3.75 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 2
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Close"
+anims/Close = SubResource( 1 )
