@@ -63,6 +63,8 @@ func _fetch_dialog(character : String):
 				return DialogDict.data.fase1[0]
 			elif character == "virgilio":
 				return DialogDict.data.fase1[1]
+			elif character == "virgilio2":
+				return DialogDict.data.fase1[2]
 		"fase2":
 			pass
 		"fase3":
@@ -93,4 +95,11 @@ func _on_Virgilio_body_entered(body):
 	if body.name == "Player":
 		visible = true
 		_start_dialog("virgilio")
+	pass # Replace with function body.
+
+
+func _on_Subvirgilio_body_entered(body):
+	if body.name == "Player":
+		visible = true
+		_start_dialog("virgilio2")
 	pass # Replace with function body.
